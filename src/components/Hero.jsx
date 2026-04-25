@@ -1,0 +1,73 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+
+// Imports estáticos — o Vite garante que esses arquivos são processados corretamente
+import heroImg from '../assets/hero.jpeg'
+
+/**
+ * Seção Hero — primeira impressão do visitante.
+ * Usa animações escalonadas para dar sensação de "despertar".
+ */
+export default function Hero() {
+  const textRef = useScrollAnimation()
+  const imageRef = useScrollAnimation()
+  const badgeRef = useScrollAnimation()
+
+  return (
+    <section className="bg-surface-container-low min-h-[90vh] flex items-center pt-8 md:pt-0">
+      <div className="container-max grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
+
+        {/* Coluna de texto */}
+        <div ref={textRef} className="flex flex-col gap-6 relative z-10 fade-in-left">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-[#d4e3ff] w-fit">
+            <span>✨</span>
+            <span className="text-[#006399] font-bold text-xs uppercase tracking-widest">
+              Método baseado em Neurociência
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-display text-5xl md:text-6xl font-semibold text-[#041c36] leading-tight tracking-tight">
+            Descubra como{' '}
+            <span className="text-primary">descomplicar</span>{' '}
+            o sono do seu bebê...
+          </h1>
+
+          {/* Subtítulo */}
+          <p className="text-lg text-on-surface-variant leading-relaxed max-w-lg">
+            Um guia gentil, seguro e embasado cientificamente para noites mais tranquilas,
+            respeitando o desenvolvimento infantil e a saúde mental materna.
+          </p>
+
+          {/* CTA principal */}
+          <div className="pt-2">
+            <a
+              href="#oferta"
+              className="inline-flex items-center justify-center bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full md:w-auto text-center text-base hover:bg-primary-container hover:shadow-xl"
+            >
+              👉 QUERO VOLTAR A DORMIR EM PAZ
+            </a>
+          </div>
+
+
+        </div>
+
+        {/* Coluna de imagem */}
+        <div ref={imageRef} className="relative h-145 w-full hidden md:block fade-in-right">
+          <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden shadow-ambient">
+            <img
+              src={heroImg}
+              alt="Mãe e bebê dormindo tranquilamente"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-image-overlay" />
+          </div>
+
+          {/* Elemento decorativo */}
+          <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-primary-container rounded-full -z-10 blur-2xl opacity-60" />
+          <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary-container rounded-full -z-10 blur-xl opacity-40" />
+        </div>
+      </div>
+    </section>
+  )
+}
