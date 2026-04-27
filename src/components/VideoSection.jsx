@@ -26,7 +26,7 @@ export default function VideoSection() {
   }
 
   return (
-    <section className="section-padding bg-[#1a2f4a]">
+    <section className="section-padding bg-[#280d35]">
       <div className="container-max text-center">
 
         <div ref={headingRef} className="mb-10 fade-in-up">
@@ -34,8 +34,7 @@ export default function VideoSection() {
             ASSISTA ANTES DE DECIDIR
           </h2>
           <p className="text-white/60 mt-4 text-lg max-w-xl mx-auto">
-            Em poucos minutos, você vai entender por que o método funciona — e por que
-            tantas famílias confiam nele.
+            Em poucos minutos, entenda por que o método funciona — e por que tantas famílias confiam nele.
           </p>
         </div>
 
@@ -57,7 +56,7 @@ export default function VideoSection() {
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="video-play-btn w-20 h-20 bg-[#006399] rounded-full flex items-center justify-center shadow-[0_20px_40px_-10px_rgba(26,47,74,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_20px_50px_-5px_rgba(0,99,153,0.6)]">
+                <div className="video-play-btn w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-[0_20px_40px_-10px_rgba(74,93,35,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-primary-container group-hover:shadow-[0_20px_50px_-5px_rgba(74,93,35,0.6)]">
                   <span className="material-symbols-outlined fill text-white text-4xl">
                     play_arrow
                   </span>

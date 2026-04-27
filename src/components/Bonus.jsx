@@ -1,11 +1,10 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const bonus = [
-  'Guia de Alimentação e Sono com Nutricionista',
-  'Masterclass: Gestão Emocional Materna',
-  'Tabelas Práticas de Janelas de Sono (0 a 3 anos)',
-  'Comunidade de Apoio no WhatsApp (1 Mês)',
-  'Áudios Relaxantes para o Ritual Noturno',
+  '1 ano de acompanhamento',
+  'Encontros mensais ao vivo',
+  'Sorteios mensais de um plano de sono exclusivo e personalizado para o seu bebê',
+  'Comunidade de Apoio no WhatsApp (com envio de materiais)',
 ]
 
 export default function Bonus() {
@@ -13,11 +12,11 @@ export default function Bonus() {
   const cardRef = useScrollAnimation()
 
   return (
-    <section className="section-padding bg-[#d0e8ff]">
+    <section className="section-padding bg-surface-container">
       <div className="container-max">
 
         <div ref={headingRef} className="text-center mb-12 fade-in-up">
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-[#041c36]">
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-secondary">
             Bônus Exclusivos
           </h2>
         </div>
@@ -33,7 +32,7 @@ export default function Bonus() {
                 className="py-6 flex items-center gap-4 first:pt-0 last:pb-0"
               >
                 <span className="text-2xl shrink-0">🎁</span>
-                <span className="font-semibold text-on-primary-container text-lg">{bonus}</span>
+                <span className="font-semibold text-primary text-lg">{bonus}</span>
               </li>
             ))}
           </ul>

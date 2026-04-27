@@ -29,14 +29,14 @@ function FaqItem({ question, answer }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white border border-[#d4e3ff] rounded-2xl shadow-sm overflow-hidden">
+    <div className="bg-white border border-primary-container rounded-2xl shadow-sm overflow-hidden">
       <button
-        className="w-full flex justify-between items-center p-6 text-left font-semibold text-[#041c36] text-lg cursor-pointer hover:bg-[#f8f9ff] transition-colors"
+        className="w-full flex justify-between items-center p-6 text-left font-semibold text-on-background text-lg cursor-pointer hover:bg-surface-variant transition-colors"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
         <span>{question}</span>
-        <span className={`material-symbols-outlined text-[#006399] transition-transform duration-300 shrink-0 ml-4 ${open ? 'rotate-180' : ''}`}>
+        <span className={`material-symbols-outlined text-primary transition-transform duration-300 shrink-0 ml-4 ${open ? 'rotate-180' : ''}`}>
           expand_more
         </span>
       </button>
@@ -59,11 +59,11 @@ export default function FAQ() {
   const ctaRef = useScrollAnimation()
 
   return (
-    <section className="section-padding bg-[#f8f9ff]" id="faq">
+    <section className="section-padding bg-background" id="faq">
       <div className="max-w-3xl mx-auto px-6">
 
         <div ref={headingRef} className="text-center mb-12 fade-in-up">
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-[#041c36]">
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-secondary">
             Perguntas Frequentes
           </h2>
         </div>
@@ -78,7 +78,7 @@ export default function FAQ() {
         <div ref={ctaRef} className="text-center fade-in-up delay-300">
           <a
             href="#oferta"
-            className="inline-flex items-center justify-center bg-[#006399] text-white font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full md:w-auto hover:bg-primary-fixed-dim hover:shadow-xl"
+            className="inline-flex items-center justify-center bg-tertiary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full md:w-auto hover:bg-tertiary-fixed-variant hover:shadow-xl"
           >
             GARANTIR MINHA VAGA AGORA
           </a>

@@ -6,53 +6,57 @@
    ============================================ */
 @theme {
   /* --- Paleta de Cores --- */
-  --color-primary: #006399;
-  --color-primary-container: #4a9fe0;
-  --color-primary-fixed: #cde5ff;
-  --color-primary-fixed-dim: #94ccff;
+  /* Verde Musgo (Destaques, ícones, credibilidade) */
+  --color-primary: #4a5d23;
+  --color-primary-container: #d3e1b9;
+  --color-primary-fixed: #e2f5ca;
+  --color-primary-fixed-dim: #c6dfa6;
   --color-on-primary: #ffffff;
-  --color-on-primary-container: #003453;
-  --color-on-primary-fixed: #001d32;
-  --color-on-primary-fixed-variant: #004b74;
-  --color-inverse-primary: #94ccff;
+  --color-on-primary-container: #1a240a;
+  --color-on-primary-fixed: #0d1403;
+  --color-on-primary-fixed-variant: #32430e;
+  --color-inverse-primary: #c6dfa6;
 
-  --color-secondary: #02677f;
-  --color-secondary-container: #98e2fd;
-  --color-secondary-fixed: #b7eaff;
-  --color-secondary-fixed-dim: #87d1ec;
+  /* Roxo (Ameixa/Ametista) (Primeira frase, método, destaques escuros) */
+  --color-secondary: #6b427a;
+  --color-secondary-container: #f5d9ff;
+  --color-secondary-fixed: #f5d9ff;
+  --color-secondary-fixed-dim: #d9b9e6;
   --color-on-secondary: #ffffff;
-  --color-on-secondary-container: #00667e;
-  --color-on-secondary-fixed: #001f28;
-  --color-on-secondary-fixed-variant: #004e60;
+  --color-on-secondary-container: #280d35;
+  --color-on-secondary-fixed: #280d35;
+  --color-on-secondary-fixed-variant: #522a60;
 
-  --color-tertiary: #7b5900;
-  --color-tertiary-container: #bd9237;
-  --color-tertiary-fixed: #ffdea4;
-  --color-tertiary-fixed-dim: #efbf5f;
+  /* Verde Musgo Vibrante (Botão CTA) */
+  --color-tertiary: #5c8526;
+  --color-tertiary-container: #ddfbaf;
+  --color-tertiary-fixed: #ddfbaf;
+  --color-tertiary-fixed-dim: #c1df95;
   --color-on-tertiary: #ffffff;
-  --color-on-tertiary-container: #412d00;
-  --color-on-tertiary-fixed: #261900;
-  --color-on-tertiary-fixed-variant: #5d4200;
+  --color-on-tertiary-container: #172a00;
+  --color-on-tertiary-fixed: #172a00;
+  --color-on-tertiary-fixed-variant: #44660e;
 
-  --color-background: #f8f9ff;
-  --color-surface: #f8f9ff;
-  --color-surface-dim: #c6dbfe;
-  --color-surface-bright: #f8f9ff;
-  --color-surface-variant: #d4e3ff;
+  /* Bege (Fundos e superfícies) */
+  --color-background: #fdfbf7;
+  --color-surface: #fdfbf7;
+  --color-surface-dim: #e6e2db;
+  --color-surface-bright: #fdfbf7;
+  --color-surface-variant: #e8e2d9;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #eff3ff;
-  --color-surface-container: #e6eeff;
-  --color-surface-container-high: #dde9ff;
-  --color-surface-container-highest: #d4e3ff;
-  --color-on-surface: #041c36;
-  --color-on-surface-variant: #404850;
-  --color-on-background: #041c36;
-  --color-inverse-surface: #1c314c;
-  --color-inverse-on-surface: #ebf1ff;
-  --color-surface-tint: #006399;
+  --color-surface-container-low: #f7f3ee;
+  --color-surface-container: #f1ede8;
+  --color-surface-container-high: #ebe7e2;
+  --color-surface-container-highest: #e5e1dc;
+  --color-on-surface: #1e1b16;
+  --color-on-surface-variant: #4a463f;
+  --color-on-background: #1e1b16;
+  --color-inverse-surface: #33302a;
+  --color-inverse-on-surface: #f6f0ea;
+  --color-surface-tint: #4a5d23;
 
-  --color-outline: #707881;
-  --color-outline-variant: #c0c7d1;
+  --color-outline: #7c776f;
+  --color-outline-variant: #cdc5bc;
 
   --color-error: #ba1a1a;
   --color-error-container: #ffdad6;
@@ -148,6 +152,7 @@ body {
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 .delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
 
 /* ============================================
     UTILITÁRIOS CUSTOMIZADOS

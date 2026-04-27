@@ -3,18 +3,12 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 // Import estático — garante que o Vite processa e copia o arquivo corretamente
 import aboutImg from '../assets/hero_3.jpeg'
 
-const credentials = [
-  { icon: '🧠', label: 'Neurobiologia' },
-  { icon: '❤️', label: 'Educadora' },
-  { icon: '👶', label: 'Mãe' },
-]
-
 export default function AboutMe() {
   const imageRef = useScrollAnimation()
   const textRef = useScrollAnimation()
 
   return (
-    <section className="section-padding bg-[#f8f9ff]">
+    <section className="section-padding bg-background">
       <div className="container-max grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* Foto */}
@@ -33,7 +27,7 @@ export default function AboutMe() {
 
         {/* Texto */}
         <div ref={textRef} className="flex flex-col gap-6 fade-in-right">
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-[#041c36]">
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-primary">
             Muito prazer, eu sou Fernanda
           </h2>
 
@@ -43,27 +37,14 @@ export default function AboutMe() {
               que estava falhando como mãe e esgotada física e mentalmente.
             </p>
             <p>
-              Foi a minha própria privação de sono que me levou a mergulhar nos estudos da
-              ciência do sono infantil. Mas eu me recusei a usar métodos que envolvessem
-              deixar meu filho chorar sozinho.
+              Vivenciando a maternidade intensamente e equilibrando as necessidades da Olívia, da Júlia e do Benício, eu senti na pele que a teoria pura muitas vezes não se sustenta quando a exaustão bate às 3 da manhã.
             </p>
             <p>
-              Hoje, ajudo famílias a encontrarem o equilíbrio entre o respeito ao
-              desenvolvimento da criança e a necessidade humana (e urgente!) de dormir dos pais.
+              Foi a minha própria privação de sono que me levou a mergulhar fundo nos estudos da ciência do sono infantil. Mas eu me recusei a usar métodos que envolvessem deixar meus filhos chorando sozinhos.
             </p>
-          </div>
-
-          {/* Tags de credenciais */}
-          <div className="flex flex-wrap gap-3 mt-2">
-            {credentials.map((cred) => (
-              <span
-                key={cred.label}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-primary-container rounded-full text-sm font-semibold text-on-primary-container"
-              >
-                <span>{cred.icon}</span>
-                {cred.label}
-              </span>
-            ))}
+            <p>
+              Hoje, meu propósito é ajudar outras famílias a encontrarem o equilíbrio perfeito: o respeito ao desenvolvimento da criança somado à necessidade humana (e urgente!) de dormir dos pais.
+            </p>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ const modules = [
   {
     number: '01',
     title: 'Fundamentos do Sono Infantil',
-    description: 'Entenda a biologia do sono, como ele evolui e por que seu bebê acorda. Desmistificando expectativas irreais.',
+    description: 'Entenda a biologia do sono, como ele evolui e por que seu bebê acorda. Chega de expectativas irreais.',
   },
   {
     number: '02',
@@ -14,22 +14,22 @@ const modules = [
   {
     number: '03',
     title: 'Ferramentas de Regulação',
-    description: 'Como acalmar um bebê agitado, lidar com a "hora da bruxa" e técnicas gentis de relaxamento pré-sono.',
+    description: 'Como acalmar um bebê agitado, vencer a temida "hora da bruxa" e aplicar técnicas gentis de relaxamento.',
   },
   {
     number: '04',
     title: 'Autonomia Guiada',
-    description: 'Passo a passo para reduzir associações de sono dependentes, com muito colo, presença e zero abandono.',
+    description: 'Passo a passo para reduzir associações de sono dependentes (como dormir só mamando ou balançando), com muito colo, presença e zero abandono.',
   },
   {
     number: '05',
     title: 'Lidando com Regressões',
-    description: 'O manual de sobrevivência para saltos de desenvolvimento, nascimento de dentes e doenças.',
+    description: 'O seu manual de sobrevivência para saltos de desenvolvimento, nascimento de dentinhos e dias de adoecimento.',
   },
   {
     number: '06',
     title: 'Sonecas Perfeitas',
-    description: 'Como alongar sonecas curtas e estruturar a rotina de transição (de 3 para 2, de 2 para 1 soneca).',
+    description: 'Como alongar aquelas sonecas curtas de 30 minutos e estruturar as transições (de 3 para 2, e de 2 para 1 soneca).',
   },
 ]
 
@@ -37,13 +37,16 @@ export default function Modules() {
   const headingRef = useScrollAnimation()
 
   return (
-    <section className="section-padding bg-[#f8f9ff]" id="modulos">
+    <section className="section-padding bg-background" id="modulos">
       <div className="container-max">
 
         <div ref={headingRef} className="text-center mb-16 fade-in-up">
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-[#041c36]">
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-secondary mb-4">
             O Caminho Detalhado
           </h2>
+          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            O que você vai aprender
+          </p>
         </div>
 
         <div className="space-y-4 max-w-4xl mx-auto">
@@ -58,7 +61,7 @@ export default function Modules() {
 
 function ModuleCard({ number, title, description, index }) {
   const ref = useScrollAnimation()
-  const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500', '']
+  const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500', 'delay-600']
 
   return (
     <div
@@ -72,7 +75,7 @@ function ModuleCard({ number, title, description, index }) {
 
       {/* Conteúdo */}
       <div>
-        <h3 className="font-display text-xl font-medium text-on-primary-container mb-2">{title}</h3>
+        <h3 className="font-display text-xl font-medium text-primary mb-2">{title}</h3>
         <p className="text-on-surface-variant leading-relaxed">{description}</p>
       </div>
     </div>

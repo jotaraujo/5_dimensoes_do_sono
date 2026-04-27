@@ -49,14 +49,14 @@ export default function Testimonials() {
   const headingRef = useScrollAnimation()
 
   return (
-    <section className="section-padding bg-[#f5f9ff]" id="depoimentos">
+    <section className="section-padding bg-primary" id="depoimentos">
       <div className="container-max">
 
         <div ref={headingRef} className="text-center mb-16 fade-in-up">
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-[#041c36]">
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-white">
             Histórias Reais, Noites Reais
           </h2>
-          <p className="text-lg text-on-surface-variant mt-4 max-w-xl mx-auto">
+          <p className="text-lg text-primary-fixed-dim mt-4 max-w-xl mx-auto">
             Resultados reais de famílias que encontraram o caminho para noites tranquilas.
           </p>
         </div>

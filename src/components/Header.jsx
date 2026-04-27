@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react'
 import logoImg from '../assets/logo.png'
 
-/**
- * Header com navbar sticky e efeito glassmorphism.
- * O fundo fica mais opaco conforme o usuário scrolla.
- */
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,15 +22,15 @@ export default function Header() {
     <header
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-blue-100'
-          : 'bg-white/80 backdrop-blur-sm border-b border-blue-50'
+          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-primary-container'
+          : 'bg-white/80 backdrop-blur-sm border-b border-transparent'
       }`}
     >
       <div className="container-max flex items-center justify-between py-4">
         {/* Logo + título — link para o topo da página */}
         <a href="#" className="flex items-center gap-2 group">
           <img src={logoImg} alt="Logo As 5 Dimensões do Sono" className="h-10 w-auto" />
-          <span className="font-display text-lg font-bold text-[#006399] group-hover:text-[#004d73] transition-colors duration-200">
+          <span className="font-display text-lg font-bold text-primary group-hover:opacity-80 transition-opacity duration-200">
             As 5 Dimensões do Sono
           </span>
         </a>
@@ -45,7 +41,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-600 font-medium hover:text-[#006399] transition-colors duration-200 text-sm"
+              className="text-slate-600 font-medium hover:text-primary transition-colors duration-200 text-sm"
             >
               {link.label}
             </a>
@@ -55,7 +51,7 @@ export default function Header() {
         {/* CTA desktop */}
         <a
           href="#oferta"
-          className="hidden md:inline-flex items-center px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-200 shadow-md hover:shadow-lg hover:bg-primary-container"
+          className="hidden md:inline-flex items-center px-6 py-3 rounded-full bg-tertiary text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-200 shadow-md hover:shadow-lg hover:bg-tertiary-fixed-variant"
         >
           Começar Agora
         </a>
@@ -79,7 +75,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-600 font-medium hover:text-[#006399] transition-colors py-1"
+              className="text-slate-600 font-medium hover:text-primary transition-colors py-1"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -87,7 +83,7 @@ export default function Header() {
           ))}
           <a
             href="#oferta"
-            className="mt-2 text-center px-6 py-3 rounded-full bg-[#006399] text-white font-semibold text-sm"
+            className="mt-2 text-center px-6 py-3 rounded-full bg-tertiary text-white font-semibold text-sm"
             onClick={() => setMenuOpen(false)}
           >
             Começar Agora
