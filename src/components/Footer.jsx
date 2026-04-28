@@ -7,7 +7,7 @@ export default function Footer() {
 
         {/* Logo + título — link para o topo da página */}
         <a href="#" className="flex items-center justify-center gap-3 group">
-          <img src={logoImg} alt="Logo As 5 Dimensões do Sono" className="h-14 w-auto" />
+          <img src={logoImg} alt="Logo As 5 Dimensões do Sono" className="h-20 w-auto drop-shadow-md" />
           <span className="font-display text-3xl font-medium text-white group-hover:text-primary-fixed-dim transition-colors duration-200">
             As 5 Dimensões do Sono
           </span>

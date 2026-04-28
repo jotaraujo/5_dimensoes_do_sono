@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
-import criancas1Img from '../assets/criancas_1.jpeg'
+import criancas1Img from '../assets/criancas_1.png'
 import criancas3Img from '../assets/criancas_3.jpeg'
 
 export default function Exhaustion() {
@@ -13,12 +13,13 @@ export default function Exhaustion() {
 
         {/* Imagens empilhadas */}
         <div ref={imageRef} className="order-2 md:order-1 relative h-120 fade-in-left">
-          {/* Imagem principal */}
-          <div className="relative z-10 w-4/5 ml-auto rounded-3xl overflow-hidden shadow-ambient aspect-4/5">
+          {/* Imagem principal — PNG com fundo transparente */}
+          <div className="relative z-10 w-4/5 ml-auto rounded-3xl shadow-ambient aspect-4/5
+            bg-linear-to-b from-primary-container/40 to-secondary-container/30 flex items-end justify-center overflow-hidden">
             <img
               src={criancas1Img}
               alt="Eu com meus filhos"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain object-bottom"
             />
           </div>
 
@@ -38,7 +39,7 @@ export default function Exhaustion() {
         {/* Texto */}
         <div ref={textRef} className="order-1 md:order-2 flex flex-col gap-6 fade-in-right">
           <h2 className="font-display text-4xl md:text-5xl font-medium text-primary leading-tight">
-            A exaustão está roubando a alegria...
+            A sua exaustão está roubando a alegria...
           </h2>
 
           <div className="text-lg text-on-surface-variant space-y-4 leading-relaxed">

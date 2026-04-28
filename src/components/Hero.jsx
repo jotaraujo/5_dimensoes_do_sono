@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-5xl md:text-6xl font-semibold text-on-surface leading-tight tracking-tight">
+          <h1 className="font-display text-5xl md:text-6xl font-semibold text-primary leading-tight tracking-tight">
             Descubra como{' '}
             <span className="text-secondary">descomplicar</span>{' '}
             o sono do seu bebê...

@@ -29,7 +29,7 @@ export default function Header() {
       <div className="container-max flex items-center justify-between py-4">
         {/* Logo + título — link para o topo da página */}
         <a href="#" className="flex items-center gap-2 group">
-          <img src={logoImg} alt="Logo As 5 Dimensões do Sono" className="h-10 w-auto" />
+          <img src={logoImg} alt="Logo As 5 Dimensões do Sono" className="h-14 w-auto drop-shadow-sm" />
           <span className="font-display text-lg font-bold text-primary group-hover:opacity-80 transition-opacity duration-200">
             As 5 Dimensões do Sono
           </span>
