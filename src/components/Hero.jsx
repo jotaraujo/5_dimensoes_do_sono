@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import Button from './ui/Button'
 
 import heroImg from '../assets/hero.jpeg'
 
@@ -15,7 +16,6 @@ export default function Hero() {
         <div ref={textRef} className="flex flex-col gap-6 relative z-10 fade-in-left">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-primary-container w-fit">
-            <span>✨</span>
             <span className="text-primary font-bold text-xs uppercase tracking-widest">
               Método baseado em Neurociência
             </span>
@@ -38,12 +38,9 @@ export default function Hero() {
 
           {/* CTA principal */}
           <div className="pt-2">
-            <a
-              href="#oferta"
-              className="inline-flex items-center justify-center bg-tertiary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full md:w-auto text-center text-base hover:bg-tertiary-fixed-variant hover:shadow-xl"
-            >
-              👉 QUERO VOLTAR A DORMIR EM PAZ
-            </a>
+            <Button href="#oferta" variant='primary' className="w-full md:w-auto">
+              QUERO VOLTAR A DORMIR EM PAZ
+            </Button>
           </div>
 
 

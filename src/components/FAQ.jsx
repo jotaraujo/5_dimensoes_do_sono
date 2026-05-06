@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import Button from './ui/Button'
 
 const faqs = [
   {
@@ -76,12 +77,9 @@ export default function FAQ() {
 
         {/* CTA final */}
         <div ref={ctaRef} className="text-center fade-in-up delay-300">
-          <a
-            href="#oferta"
-            className="inline-flex items-center justify-center bg-tertiary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full md:w-auto hover:bg-tertiary-fixed-variant hover:shadow-xl"
-          >
+          <Button href="#oferta" className="w-full md:w-auto">
             GARANTIR MINHA VAGA AGORA
-          </a>
+          </Button>
         </div>
       </div>
     </section>

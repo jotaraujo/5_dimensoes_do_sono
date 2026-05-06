@@ -52,7 +52,7 @@ export default function Exhaustion() {
           </div>
 
           {/* Citação em destaque */}
-          <blockquote className="bg-primary-container p-6 rounded-2xl border-l-4 border-primary mt-2">
+          <blockquote className="bg-secondary-container p-6 rounded-2xl border-l-4 border-secondary mt-2">
             <p className="text-on-primary-container italic text-lg leading-relaxed">
               "Não precisa ser assim. O sono não deve ser treinado, ele é uma habilidade que deve ser facilitada e nutrida com segurança, previsibilidade e acolhimento."
             </p>

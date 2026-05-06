@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import logoImg from '../assets/logo.png'
+import logoImg from '../assets/logomarca.png'
+import Button from './ui/Button'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -49,12 +50,12 @@ export default function Header() {
         </nav>
 
         {/* CTA desktop */}
-        <a
+        <Button
           href="#oferta"
-          className="hidden md:inline-flex items-center px-6 py-3 rounded-full bg-tertiary text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-200 shadow-md hover:shadow-lg hover:bg-tertiary-fixed-variant"
+          className="hidden md:inline-flex px-6 py-3 text-sm font-semibold"
         >
           Começar Agora
-        </a>
+        </Button>
 
         {/* Botão menu mobile */}
         <button
@@ -81,13 +82,13 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
+          <Button
             href="#oferta"
-            className="mt-2 text-center px-6 py-3 rounded-full bg-tertiary text-white font-semibold text-sm"
+            className="mt-2 w-full text-sm font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             Começar Agora
-          </a>
+          </Button>
         </nav>
       </div>
     </header>

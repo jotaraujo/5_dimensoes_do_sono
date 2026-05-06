@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import Button from './ui/Button'
 
 export default function Offer() {
   const cardRef = useScrollAnimation()
@@ -28,12 +29,9 @@ export default function Offer() {
           </div>
 
           {/* CTA principal */}
-          <a
-            href="#"
-            className="block bg-tertiary text-white font-bold px-8 py-5 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 w-full text-lg mb-8 hover:bg-tertiary-fixed-variant hover:shadow-xl"
-          >
+          <Button href="#" className="w-full text-lg mb-8">
             SIM, QUERO ACESSAR O MÉTODO AGORA
-          </a>
+          </Button>
 
           {/* Garantia */}
           <div className="bg-primary-container border border-primary rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-left">
