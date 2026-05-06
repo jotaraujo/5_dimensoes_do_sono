@@ -26,7 +26,7 @@ export default function VideoSection() {
   }
 
   return (
-    <section className="section-padding bg-[#280d35]">
+    <section className="section-padding bg-secondary">
       <div className="container-max text-center">
 
         <div ref={headingRef} className="mb-10 fade-in-up">

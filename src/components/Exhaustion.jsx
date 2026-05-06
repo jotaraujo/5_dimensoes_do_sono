@@ -39,7 +39,7 @@ export default function Exhaustion() {
         {/* Texto */}
         <div ref={textRef} className="order-1 md:order-2 flex flex-col gap-6 fade-in-right">
           <h2 className="font-display text-4xl md:text-5xl font-medium text-primary leading-tight">
-            A sua exaustão está roubando a alegria...
+            A sua exaustão está roubando a sua alegria...
           </h2>
 
           <div className="text-lg text-on-surface-variant space-y-4 leading-relaxed">

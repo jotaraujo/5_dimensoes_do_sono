@@ -56,7 +56,11 @@ export default function DimensionCard({ icon, title, description, color, border,
         className="dimension-card__bar h-0.5 w-8 rounded-full mb-4"
       />
 
-      <h3 className="dimension-card__title font-display text-2xl font-medium text-primary mb-3">
+      {/* Cor do título igual à cor do ícone de cada dimensão */}
+      <h3
+        style={{ color }}
+        className="dimension-card__title font-display text-2xl font-medium mb-3"
+      >
         {title}
       </h3>
 
