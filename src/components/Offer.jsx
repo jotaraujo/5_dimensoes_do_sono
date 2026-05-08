@@ -19,17 +19,25 @@ export default function Offer() {
 
           {/* Preço */}
           <div className="mb-8">
-            <p className="text-on-surface-variant line-through text-lg mb-2">
-              De R$ 697,00 por apenas
+            <p className="text-secondary font-bold text-lg mb-3">
+              🎁 DESCONTO EXCLUSIVO DE DIA DAS MÃES
             </p>
-            <div className="text-5xl font-display font-bold text-primary mb-2">
-              12x de R$ 33,08
+            <p className="text-on-surface-variant text-base mb-1">
+              De <span className="line-through">R$ 497,00</span> por apenas
+            </p>
+            <div className="text-5xl font-display font-bold text-primary mb-1">
+              R$ 297,00 <span className="text-2xl font-normal">à vista</span>
             </div>
-            <p className="text-on-surface-variant">ou R$ 297 à vista</p>
+            <p className="text-on-surface-variant text-base mb-4">
+              💳 Ou em <strong>12x de R$ 30,72</strong>
+            </p>
+            <p className="text-on-surface-variant text-sm leading-relaxed bg-primary-container rounded-xl px-4 py-3 border border-primary-container">
+              💡 Pensa só: o investimento é de apenas <strong>R$ 1,02 por dia</strong>. Por menos que um cafezinho na padaria você finalmente volta a dormir em paz!
+            </p>
           </div>
 
           {/* CTA principal */}
-          <Button href="#" className="w-full text-lg mb-8">
+          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" className="w-full text-lg mb-8">
             SIM, QUERO ACESSAR O MÉTODO AGORA
           </Button>
 

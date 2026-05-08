@@ -38,7 +38,7 @@ export default function Hero() {
 
           {/* CTA principal */}
           <div className="pt-2">
-            <Button href="#oferta" variant='primary' className="w-full md:w-auto">
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant='primary' className="w-full md:w-auto">
               QUERO VOLTAR A DORMIR EM PAZ
             </Button>
           </div>

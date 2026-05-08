@@ -51,7 +51,8 @@ export default function Header() {
 
         {/* CTA desktop */}
         <Button
-          href="#oferta"
+          href="https://pay.kiwify.com.br/5nOEc6c"
+          target="_blank"
           className="hidden md:inline-flex px-6 py-3 text-sm font-semibold"
         >
           Começar Agora
@@ -83,7 +84,8 @@ export default function Header() {
             </a>
           ))}
           <Button
-            href="#oferta"
+            href="https://pay.kiwify.com.br/5nOEc6c"
+            target="_blank"
             className="mt-2 w-full text-sm font-semibold"
             onClick={() => setMenuOpen(false)}
           >

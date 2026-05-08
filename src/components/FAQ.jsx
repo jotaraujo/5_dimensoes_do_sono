@@ -77,7 +77,7 @@ export default function FAQ() {
 
         {/* CTA final */}
         <div ref={ctaRef} className="text-center fade-in-up delay-300">
-          <Button href="#oferta" className="w-full md:w-auto">
+          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" className="w-full md:w-auto">
             GARANTIR MINHA VAGA AGORA
           </Button>
         </div>
