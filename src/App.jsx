@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe'
 import Testimonials from './components/Testimonials'
 import VideoSection from './components/VideoSection'
 import Offer from './components/Offer'
+import PathSelector from './components/PathSelector'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 
@@ -16,7 +17,7 @@ import Footer from './components/Footer'
  *
  * Ordem das seções (baseada no design Stitch + boas práticas de copywriting):
  * Header → Hero → Dor → Solução → Módulos → Bônus → Autoridade → Prova Social
- * → Vídeo → Oferta → FAQ → Footer
+ * → Vídeo → Qual Caminho → Oferta → FAQ → Footer
  *
  * Essa ordem segue a estrutura AIDA:
  * Atenção → Interesse → Desejo → Ação
@@ -51,7 +52,10 @@ export default function App() {
         {/* 8. ENGAJAMENTO — Vídeo de apresentação */}
         <VideoSection />
 
-        {/* 9. AÇÃO — Oferta e garantia */}
+        {/* 9. DECISÃO — Curso ou Mentoria? */}
+        <PathSelector />
+
+        {/* 10. AÇÃO — Oferta e garantia */}
         <Offer />
 
         {/* 10. OBJEÇÕES — FAQ */}

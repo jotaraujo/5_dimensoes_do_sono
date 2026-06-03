@@ -5,6 +5,7 @@ import corpoImg    from '../assets/corpo.png'
 import vinculoImg  from '../assets/vinculo.png'
 import rotinaImg   from '../assets/rotina.png'
 
+import Button from './ui/Button'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import DimensionCard from './ui/DimensionCard'
 
@@ -75,6 +76,16 @@ export default function Method() {
               <DimensionCard {...dim} index={i} />
             </div>
           ))}
+        </div>
+
+        {/* Ponte narrativa: curso vs mentoria */}
+        <div className="text-center mt-14 max-w-2xl mx-auto flex flex-col items-center gap-6">
+          <p className="text-lg text-on-surface-variant leading-relaxed">
+            Algumas famílias conseguem aplicar o método sozinhas através do curso. Outras preferem ter um acompanhamento individual para identificar com mais precisão as causas dos despertares.
+          </p>
+          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline">
+            Aplicar para Mentoria
+          </Button>
         </div>
       </div>
     </section>

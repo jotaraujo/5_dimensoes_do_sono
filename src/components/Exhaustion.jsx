@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import Button from './ui/Button'
 
 import criancas1Img from '../assets/criancas_1.png'
 import criancas3Img from '../assets/criancas_3.jpeg'
@@ -57,6 +58,16 @@ export default function Exhaustion() {
               "Não precisa ser assim. O sono não deve ser treinado, ele é uma habilidade que deve ser facilitada e nutrida com segurança, previsibilidade e acolhimento."
             </p>
           </blockquote>
+
+          {/* Transição para a mentoria */}
+          <p className="text-base text-on-surface-variant leading-relaxed">
+            Nem todo despertar tem a mesma causa. Por isso desenvolvi o Método 5 Dimensões do Sono para identificar o que realmente está impactando o sono da criança.
+          </p>
+          <div>
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline">
+              Conhecer a Mentoria
+            </Button>
+          </div>
         </div>
       </div>
     </section>

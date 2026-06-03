@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import Button from './ui/Button'
 
 // Imports estáticos — o Vite garante que esses arquivos são processados corretamente
 import feedback1 from '../assets/feedback_1.jpeg'
@@ -70,6 +71,16 @@ export default function Testimonials() {
           {feedbackImages.map((feedback, i) => (
             <FeedbackItem key={i} {...feedback} index={i} />
           ))}
+        </div>
+
+        {/* CTA Mentoria — após os depoimentos */}
+        <div className="text-center mt-14 flex flex-col items-center gap-6">
+          <p className="text-lg text-primary-fixed-dim max-w-xl leading-relaxed">
+            Cada família possui uma combinação única de fatores influenciando o sono. Por isso também ofereço acompanhamento individual.
+          </p>
+          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            Quero uma avaliação
+          </Button>
         </div>
       </div>
     </section>

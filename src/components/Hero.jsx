@@ -36,10 +36,13 @@ export default function Hero() {
             Um guia gentil, prático e embasado cientificamente para noites mais tranquilas, respeitando o desenvolvimento do seu filho e a sua saúde mental.
           </p>
 
-          {/* CTA principal */}
-          <div className="pt-2">
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant='primary' className="w-full md:w-auto">
-              QUERO VOLTAR A DORMIR EM PAZ
+          {/* CTAs — Curso e Mentoria lado a lado */}
+          <div className="pt-2 flex flex-col sm:flex-row gap-3">
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="primary" className="w-full sm:w-auto">
+              Quero acessar o Curso
+            </Button>
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" className="w-full sm:w-auto">
+              Quero uma avaliação individual
             </Button>
           </div>
 

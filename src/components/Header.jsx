@@ -49,14 +49,17 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA desktop */}
-        <Button
-          href="https://pay.kiwify.com.br/5nOEc6c"
-          target="_blank"
-          className="hidden md:inline-flex px-6 py-3 text-sm font-semibold"
-        >
-          Começar Agora
-        </Button>
+        {/* CTA desktop — envolvido em div para garantir hidden no mobile */}
+        {/* (o componente Button tem inline-flex embutido, que conflita com a classe hidden do Tailwind) */}
+        <div className="hidden md:block">
+          <Button
+            href="https://pay.kiwify.com.br/5nOEc6c"
+            target="_blank"
+            className="px-6 py-3 text-sm font-semibold"
+          >
+            Começar Agora
+          </Button>
+        </div>
 
         {/* Botão menu mobile */}
         <button
@@ -83,6 +86,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          {/* Botão de ação no menu mobile */}
           <Button
             href="https://pay.kiwify.com.br/5nOEc6c"
             target="_blank"
