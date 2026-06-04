@@ -6,14 +6,17 @@ import Button from './ui/Button'
  */
 export default function StickyCta() {
   return (
-    <div className="fixed bottom-0 left-0 w-full z-9999 p-4 bg-linear-to-t from-background to-background/95 backdrop-blur-sm md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
-      <Button
-        href="https://forms.gle/2LaybDMZUWx4W7wf9"
-        target="_blank"
-        className="w-full text-lg"
-      >
-        Solicitar Avaliação
-      </Button>
+    <div className="fixed bottom-0 left-0 w-full z-9999 p-4 bg-linear-to-t from-background to-background/95 backdrop-blur-sm md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.1)] flex justify-center">
+      <div className="w-full max-w-90">
+        <Button
+          href="https://forms.gle/2LaybDMZUWx4W7wf9"
+          target="_blank"
+          variant="primary"
+          size="full"
+        >
+          Solicitar Avaliação
+        </Button>
+      </div>
     </div>
   )
 }
