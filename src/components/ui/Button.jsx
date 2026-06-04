@@ -6,6 +6,7 @@
  * - children         → texto ou conteúdo interno do botão
  * - icon (string)    → emoji ou texto de ícone exibido antes do children
  * - variant          → 'primary' | 'secondary' | 'outline' (padrão: 'primary')
+ * - size             → 'default' | 'full' (padrão: 'default')
  * - className        → classes extras para sobrescrever ou complementar o estilo
  * - ...props         → quaisquer outros atributos HTML válidos (onClick, type, etc.)
  */
@@ -14,6 +15,7 @@ export default function Button({
   children,
   icon,
   variant = 'primary',
+  size = 'default',
   className = '',
   ...props
 }) {
@@ -28,8 +30,15 @@ export default function Button({
   }
 
   // Classes base compartilhadas por todas as variantes
+  // Tamanho default: largura baseada no conteúdo com limites min/max
+  // Tamanho full: ocupa 100% da largura disponível
+  const sizeClasses = {
+    default: 'min-w-[200px] max-w-[320px] justify-center',
+    full: 'w-full justify-center',
+  }
+
   const baseClasses =
-    'inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 text-base'
+    `inline-flex items-center gap-2 font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 text-base ${sizeClasses[size]}`
 
   const allClasses = `${baseClasses} ${variantClasses[variant]} ${className}`
 

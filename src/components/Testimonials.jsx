@@ -1,7 +1,7 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
 
-// Imports estáticos — o Vite garante que esses arquivos são processados corretamente
+// Imports estáticos
 import feedback1 from '../assets/feedback_1.jpeg'
 import feedback2 from '../assets/feedback_2.jpeg'
 import feedback3 from '../assets/feedback_3.jpeg'
@@ -22,13 +22,8 @@ const feedbackImages = [
   { src: feedback8, alt: 'Print de feedback da cliente 8' },
 ]
 
-/**
- * Item individual do mural de depoimentos.
- * Sem altura fixa — cada print ocupa o espaço que precisa, sem cortes nem fundo branco.
- */
 function FeedbackItem({ src, alt, index }) {
   const ref = useScrollAnimation()
-  // Alterna o delay para criar uma entrada escalonada e natural
   const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-100', 'delay-200', 'delay-300', 'delay-100', 'delay-200']
 
   return (
@@ -48,38 +43,50 @@ function FeedbackItem({ src, alt, index }) {
 
 export default function Testimonials() {
   const headingRef = useScrollAnimation()
+  const phrasesRef = useScrollAnimation()
 
   return (
     <section className="section-padding bg-primary" id="depoimentos">
       <div className="container-max">
 
-        <div ref={headingRef} className="text-center mb-16 fade-in-up">
+        <div ref={headingRef} className="text-center mb-10 fade-in-up">
           <h2 className="font-display text-4xl md:text-5xl font-medium text-white">
-            Histórias Reais, Noites Reais
+            Famílias que finalmente entenderam o que estava por trás dos despertares
           </h2>
           <p className="text-lg text-primary-fixed-dim mt-4 max-w-xl mx-auto">
-            Resultados reais de famílias que encontraram o caminho para noites tranquilas.
+            Cada família possui uma combinação única de fatores influenciando o sono. Por isso os resultados acontecem de forma individualizada.
           </p>
         </div>
 
-        {/*
-         * Layout Masonry com CSS columns.
-         * Cada print flui naturalmente na coluna, sem cortes nem espaços brancos.
-         * Em mobile: 1 coluna | tablet: 2 colunas | desktop: 4 colunas
-         */}
+        {/* Frases de identificação */}
+        <div ref={phrasesRef} className="max-w-4xl mx-auto mb-14 fade-in-up delay-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <p className="text-white text-sm italic">"Meu filho acordava de hora em hora."</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <p className="text-white text-sm italic">"Já tinha tentado três métodos diferentes."</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <p className="text-white text-sm italic">"Achei que o problema era a associação ao peito."</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <p className="text-white text-sm italic">"Descobrimos que a causa era outra."</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Masonry grid de depoimentos */}
         <div className="masonry-grid">
           {feedbackImages.map((feedback, i) => (
             <FeedbackItem key={i} {...feedback} index={i} />
           ))}
         </div>
 
-        {/* CTA Mentoria — após os depoimentos */}
-        <div className="text-center mt-14 flex flex-col items-center gap-6">
-          <p className="text-lg text-primary-fixed-dim max-w-xl leading-relaxed">
-            Cada família possui uma combinação única de fatores influenciando o sono. Por isso também ofereço acompanhamento individual.
-          </p>
-          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-            Quero uma avaliação
+        {/* CTA após depoimentos */}
+        <div className="text-center mt-14">
+          <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
+            Solicitar Avaliação
           </Button>
         </div>
       </div>

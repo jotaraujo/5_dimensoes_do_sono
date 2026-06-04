@@ -17,16 +17,19 @@ export default function Footer() {
           Transformando as noites das famílias com ciência e acolhimento.
         </p>
 
-        {/* CTA final — Mentoria */}
+        {/* CTA final */}
         <div className="flex flex-col items-center gap-4 py-6 border-t border-white/10 w-full">
           <p className="text-white text-lg font-medium">
-            Ainda não sabe qual é a causa dos despertares do seu filho?
+            talvez o problema não seja aquilo que você imagina.
+          </p>
+          <p className="text-primary-fixed-dim text-base max-w-xl">
+            Muitas famílias chegam acreditando que o problema está apenas na rotina. Mas quando investigamos as 5 Dimensões do Sono, frequentemente encontramos fatores que estavam passando despercebidos.
           </p>
           <Button
-            href="https://pay.kiwify.com.br/5nOEc6c"
+            href="https://forms.gle/2LaybDMZUWx4W7wf9"
             target="_blank"
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-secondary"
+            size="default"
           >
             Solicitar Avaliação
           </Button>
@@ -49,9 +52,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-secondary-fixed-dim text-xs mt-4">
-          © 2025 As 5 Dimensões do Sono · 5dimensoesdosono.com.br
-        </div>
+        <p className="text-surface-variant text-xs mt-4">
+          © {new Date().getFullYear()} As 5 Dimensões do Sono. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   )

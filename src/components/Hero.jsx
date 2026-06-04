@@ -6,7 +6,6 @@ import heroImg from '../assets/hero.jpeg'
 export default function Hero() {
   const textRef = useScrollAnimation()
   const imageRef = useScrollAnimation()
-  const badgeRef = useScrollAnimation()
 
   return (
     <section className="bg-surface-container-low min-h-[90vh] flex items-center pt-8 md:pt-0">
@@ -14,39 +13,28 @@ export default function Hero() {
 
         {/* Coluna de texto */}
         <div ref={textRef} className="flex flex-col gap-6 relative z-10 fade-in-left">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-primary-container w-fit">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest">
-              Método baseado em Neurociência
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="font-display text-5xl md:text-6xl font-semibold text-primary leading-tight tracking-tight">
-            Descubra como{' '}
-            <span className="text-secondary">descomplicar</span>{' '}
-            o sono do seu bebê...
+            Seu bebê continua acordando mesmo depois de você tentar de tudo?
           </h1>
 
           {/* Subtítulo */}
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-lg">
-            E resgatar as noites de paz da sua família. Sem choro e sem treinamentos rígidos.
+            O Método As 5 Dimensões do Sono ajuda famílias a identificarem as causas dos despertares e construírem noites mais tranquilas, respeitando o desenvolvimento da criança, o vínculo familiar e a saúde mental dos pais.
           </p>
-          <p className='text-lg text-on-surface-variant leading-relaxed max-w-lg'>
-            Um guia gentil, prático e embasado cientificamente para noites mais tranquilas, respeitando o desenvolvimento do seu filho e a sua saúde mental.
+          <p className="text-lg text-on-surface-variant leading-relaxed max-w-lg">
+            Sem deixar chorar. Sem treinamentos rígidos. Sem fórmulas prontas.
           </p>
 
-          {/* CTAs — Curso e Mentoria lado a lado */}
-          <div className="pt-2 flex flex-col sm:flex-row gap-3">
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="primary" className="w-full sm:w-auto">
-              Quero acessar o Curso
+          {/* CTAs — Botões com largura padronizada */}
+          <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
+              Solicitar Avaliação
             </Button>
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" className="w-full sm:w-auto">
-              Quero uma avaliação individual
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" size="default">
+              Conhecer Curso
             </Button>
           </div>
-
-
         </div>
 
         {/* Coluna de imagem */}

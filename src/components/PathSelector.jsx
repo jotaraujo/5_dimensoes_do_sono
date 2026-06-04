@@ -3,25 +3,19 @@ import Button from './ui/Button'
 
 /**
  * PathSelector — Seção de decisão entre Curso Online e Mentoria Individual.
- *
- * Exibida antes do Checkout para ajudar o visitante a escolher
- * o caminho mais adequado para sua família.
- *
- * Layout: 2 colunas em desktop, 1 coluna (empilhado) em mobile.
  */
-
-// Dados de cada coluna separados do JSX para facilitar manutenção futura
 const paths = [
   {
     tag: 'CURSO ONLINE',
     tagColor: 'bg-primary-container text-primary',
     title: 'Ideal para quem:',
     benefits: [
-      'Quer aprender o método no próprio ritmo',
-      'Deseja aplicar as estratégias com autonomia',
-      'Busca um guia completo, prático e científico',
+      'Deseja aprender o Método As 5 Dimensões do Sono',
+      'Prefere aplicar as orientações no próprio ritmo',
+      'Busca autonomia para analisar e ajustar a rotina do filho',
+      'Quer acesso ao método completo por um investimento menor',
     ],
-    cta: 'Quero o Curso',
+    cta: 'Quero acessar o Curso',
     ctaVariant: 'primary',
     ctaHref: 'https://pay.kiwify.com.br/5nOEc6c',
     cardClass: 'border-primary',
@@ -31,22 +25,18 @@ const paths = [
     tagColor: 'bg-secondary-container text-secondary',
     title: 'Ideal para quem:',
     benefits: [
-      'Precisa de orientação personalizada',
-      'Já tentou outras estratégias sem sucesso',
-      'Deseja identificar a causa dos despertares com acompanhamento',
+      'Já tentou diversas estratégias sem sucesso',
+      'Deseja identificar as causas dos despertares com mais precisão',
+      'Busca orientação personalizada',
+      'Precisa de um plano adaptado à realidade da família',
     ],
-    cta: 'Aplicar para Mentoria',
+    cta: 'Solicitar Avaliação',
     ctaVariant: 'outline',
-    ctaHref: 'https://pay.kiwify.com.br/5nOEc6c',
+    ctaHref: 'https://forms.gle/2LaybDMZUWx4W7wf9',
     cardClass: 'border-secondary',
   },
 ]
 
-/**
- * PathCard — card individual de cada caminho.
- * Extraído como componente separado para que o hook useScrollAnimation
- * seja chamado no nível do componente (Regras dos Hooks do React).
- */
 function PathCard({ tag, tagColor, title, benefits, cta, ctaVariant, ctaHref, cardClass }) {
   const cardRef = useScrollAnimation()
 
@@ -69,7 +59,6 @@ function PathCard({ tag, tagColor, title, benefits, cta, ctaVariant, ctaHref, ca
       <ul className="flex flex-col gap-3 flex-1">
         {benefits.map((benefit) => (
           <li key={benefit} className="flex items-start gap-3 text-on-surface-variant">
-            {/* Ícone de check estilizado */}
             <span className="mt-1 shrink-0 w-5 h-5 rounded-full bg-primary-container flex items-center justify-center text-primary text-xs font-bold">
               ✓
             </span>
@@ -78,12 +67,12 @@ function PathCard({ tag, tagColor, title, benefits, cta, ctaVariant, ctaHref, ca
         ))}
       </ul>
 
-      {/* Botão de conversão */}
+      {/* Botão com largura total dentro do card */}
       <Button
         href={ctaHref}
         target="_blank"
         variant={ctaVariant}
-        className="w-full mt-2"
+        size="full"
       >
         {cta}
       </Button>
@@ -101,14 +90,14 @@ export default function PathSelector() {
         {/* Cabeçalho da seção */}
         <div ref={headingRef} className="text-center mb-12 fade-in-up">
           <h2 className="font-display text-4xl md:text-5xl font-medium text-primary leading-tight">
-            Qual o melhor caminho para sua família?
+            Qual é o melhor caminho para sua família?
           </h2>
           <p className="text-lg text-on-surface-variant mt-4 max-w-xl mx-auto leading-relaxed">
             Cada família tem um ritmo. Escolha a forma que mais combina com você.
           </p>
         </div>
 
-        {/* Grid 2 colunas — empilha em mobile automaticamente */}
+        {/* Grid 2 colunas */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {paths.map((path) => (
             <PathCard key={path.tag} {...path} />

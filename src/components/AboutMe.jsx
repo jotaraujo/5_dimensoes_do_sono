@@ -33,17 +33,19 @@ export default function AboutMe() {
 
           <div className="text-lg text-on-surface-variant space-y-4 leading-relaxed">
             <p>
-              Eu já estive exatamente onde você está hoje. Acordando de hora em hora, sentindo
-              que estava falhando como mãe e esgotada física e mentalmente.
+              Sou criadora do Método As 5 Dimensões do Sono e mãe da Olívia, da Júlia e do Benício.
             </p>
             <p>
-              Vivenciando a maternidade intensamente e equilibrando as necessidades da Olívia, da Júlia e do Benício, eu senti na pele que a teoria pura muitas vezes não se sustenta quando a exaustão bate às 3 da manhã.
+              Minha própria experiência com a privação de sono me levou a estudar profundamente o sono infantil e a buscar respostas além das soluções tradicionais que costumam focar apenas na rotina ou na forma de adormecer.
             </p>
             <p>
-              Foi a minha própria privação de sono que me levou a mergulhar fundo nos estudos da ciência do sono infantil. Mas eu me recusei a usar métodos que envolvessem deixar meus filhos chorando sozinhos.
+              Ao longo dessa jornada, percebi que os despertares podem ter origens muito diferentes e que cada criança precisa ser compreendida de forma individual.
             </p>
             <p>
-              Hoje, meu propósito é ajudar outras famílias a encontrarem o equilíbrio perfeito: o respeito ao desenvolvimento da criança somado à necessidade humana (e urgente!) de dormir dos pais.
+              Foi assim que nasceu o Método As 5 Dimensões do Sono: uma abordagem que investiga as possíveis causas dos despertares e ajuda famílias a construírem noites mais tranquilas sem recorrer ao choro ou a treinamentos rígidos.
+            </p>
+            <p>
+              Hoje ajudo famílias que desejam compreender melhor o sono dos seus filhos e encontrar caminhos possíveis, respeitosos e sustentáveis para toda a casa.
             </p>
           </div>
         </div>

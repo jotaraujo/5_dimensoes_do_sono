@@ -4,20 +4,36 @@ import Button from './ui/Button'
 
 const faqs = [
   {
-    question: 'Vou precisar deixar meu bebê chorando?',
-    answer: 'Não. O método As 5 Dimensões do Sono é 100% baseado no apego seguro. Não usamos métodos de "chorar até dormir" (cry it out) ou de afastamento gradual. Trabalhamos a autonomia com colo, presença e acolhimento.',
-  },
-  {
     question: 'Para qual idade o método funciona?',
-    answer: 'O curso cobre desde o nascimento (fase de extero-gestação) até os 3 anos de idade, abordando as especificidades neurológicas e físicas de cada fase.',
+    answer: 'O Método As 5 Dimensões do Sono pode ser aplicado desde o nascimento até os 3 anos de idade. Tanto no curso quanto na mentoria, as orientações respeitam as características neurológicas, emocionais e físicas de cada fase do desenvolvimento infantil.',
   },
   {
-    question: 'Meu bebê só dorme mamando. O curso ajuda?',
-    answer: 'Sim! Temos um módulo específico sobre associações de sono. Ensinamos como manter a amamentação (que é maravilhosa) desvinculando-a gentilmente da necessidade de adormecer, permitindo que outros cuidadores também consigam fazer o bebê dormir.',
+    question: 'Meu bebê só dorme mamando. O método ajuda?',
+    answer: 'Sim. Mas antes de tentar mudar qualquer associação de sono, precisamos identificar a causa dos despertares. Muitas vezes, o peito não é o problema, mas a forma que o bebê encontrou para lidar com um desequilíbrio em uma ou mais das 5 dimensões do sono. O método atua na causa, não apenas nos sintomas.',
   },
   {
-    question: 'Qual o tempo de acesso ao curso?',
-    answer: 'Você tem acesso a todo o conteúdo, atualizações e bônus por 1 ano inteiro. Pode assistir no seu ritmo e rever sempre que passarem por um novo salto de desenvolvimento.',
+    question: 'Qual a diferença entre Curso e Mentoria?',
+    answer: 'O Curso As 5 Dimensões do Sono foi criado para famílias que desejam aplicar o método com autonomia, seguindo um passo a passo completo. Já a Mentoria Individual é indicada para quem busca um acompanhamento personalizado, com análise detalhada, diagnóstico das causas dos despertares e plano de ação adaptado à realidade da família.',
+  },
+  {
+    question: 'Em quanto tempo posso ver resultados?',
+    answer: 'Cada bebê e cada família têm uma história diferente. Algumas famílias percebem mudanças nos primeiros dias, enquanto outras precisam de mais tempo. O foco do método não é oferecer soluções rápidas, mas mudanças consistentes, respeitosas e sustentáveis.',
+  },
+  {
+    question: 'Como sei se preciso do Curso ou da Mentoria?',
+    answer: 'Se você gosta de aprender e aplicar as orientações no seu ritmo, o curso pode ser suficiente. Se já tentou diversas estratégias sem sucesso, enfrenta múltiplos despertares, resistência intensa para dormir ou deseja orientação individualizada, a mentoria costuma ser o caminho mais indicado.',
+  },
+  {
+    question: 'Se eu optar pelo curso, quanto tempo tenho de acesso?',
+    answer: 'Você terá acesso ao conteúdo completo, atualizações e materiais complementares por 1 ano, podendo assistir às aulas no seu ritmo e revisitar os conteúdos sempre que precisar.',
+  },
+  {
+    question: 'O método utiliza deixar chorar?',
+    answer: 'Não. O Método As 5 Dimensões do Sono não utiliza técnicas baseadas em deixar o bebê chorando sozinho para aprender a dormir. O foco é compreender por que o sono está difícil e atuar nas causas dos despertares, respeitando o vínculo entre pais e filhos e as necessidades individuais de cada criança.',
+  },
+  {
+    question: 'E se eu já tiver tentado de tudo?',
+    answer: 'Essa é justamente a situação de muitas famílias que chegam até nós. Em muitos casos, o problema não está na rotina, na associação de sono ou no ambiente isoladamente, mas na interação entre diferentes fatores. O Método As 5 Dimensões do Sono foi criado para olhar o sono infantil de forma mais ampla, identificando causas que frequentemente passam despercebidas.',
   },
 ]
 
@@ -57,7 +73,6 @@ function FaqItem({ question, answer }) {
 export default function FAQ() {
   const headingRef = useScrollAnimation()
   const faqsRef = useScrollAnimation()
-  const ctaRef = useScrollAnimation()
 
   return (
     <section className="section-padding bg-background" id="faq">
@@ -73,13 +88,6 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <FaqItem key={i} {...faq} />
           ))}
-        </div>
-
-        {/* CTA final */}
-        <div ref={ctaRef} className="text-center fade-in-up delay-300">
-          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" className="w-full md:w-auto">
-            GARANTIR MINHA VAGA AGORA
-          </Button>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
  * Componente DimensionCard
  *
  * Representa um card de uma das 5 dimensões do sono.
+ * Layout fluido sem scroll interno - cards crescem conforme necessidade do conteúdo.
  *
  * Props:
  * - icon (string)        → imagem importada estaticamente via import
@@ -25,6 +26,14 @@ export default function DimensionCard({ icon, title, description, color, border,
   // Cor da borda superior: visível no hover, transparente no estado normal
   const topBorderColor = hovered ? (border || color) : 'transparent'
 
+  // Converte quebras de linha \n para quebras visuais
+  const formattedDescription = description.split('\n').map((line, i, arr) => (
+    <span key={i}>
+      {line}
+      {i < arr.length - 1 && <br />}
+    </span>
+  ))
+
   return (
     <div
       ref={cardRef}
@@ -32,19 +41,18 @@ export default function DimensionCard({ icon, title, description, color, border,
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={`
-        dimension-card w-full bg-white rounded-2xl p-8 shadow-ambient fade-in-up
+        dimension-card w-full bg-white rounded-2xl p-5 shadow-ambient fade-in-up
         flex flex-col border-t-4 transition-all duration-300
         ${delay}
       `}
     >
-      {/* Ícone com fundo colorido em versão transparente (hex + '25' = ~15% de opacidade) */}
+      {/* Ícone com fundo colorido em versão transparente */}
       <div
         style={{ backgroundColor: color ? `${color}25` : undefined }}
-        className="dimension-card__icon w-16 h-16 rounded-full flex items-center justify-center mb-6 overflow-hidden"
+        className="dimension-card__icon w-12 h-12 rounded-full flex items-center justify-center mb-4 overflow-hidden shrink-0"
       >
-        {/* Flexível: aceita imagem (string) ou JSX (emoji, ícone SVG, etc.) */}
         {typeof icon === 'string' ? (
-          <img src={icon} alt={title} className="w-10 h-10 object-contain" />
+          <img src={icon} alt={title} className="w-8 h-8 object-contain" />
         ) : (
           icon
         )}
@@ -53,18 +61,21 @@ export default function DimensionCard({ icon, title, description, color, border,
       {/* Barra decorativa horizontal com a cor da dimensão */}
       <div
         style={{ backgroundColor: color }}
-        className="dimension-card__bar h-0.5 w-8 rounded-full mb-4"
+        className="dimension-card__bar h-0.5 w-6 rounded-full mb-3"
       />
 
       {/* Cor do título igual à cor do ícone de cada dimensão */}
       <h3
         style={{ color }}
-        className="dimension-card__title font-display text-2xl font-medium mb-3"
+        className="dimension-card__title font-display text-xl font-medium mb-2"
       >
         {title}
       </h3>
 
-      <p className="text-on-surface-variant leading-relaxed grow">{description}</p>
+      {/* Descrição fluida - sem maxHeight fixo, sem scroll */}
+      <div className="text-sm text-on-surface-variant leading-relaxed">
+        {formattedDescription}
+      </div>
     </div>
   )
 }

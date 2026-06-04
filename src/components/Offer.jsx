@@ -14,22 +14,24 @@ export default function Offer() {
         >
           {/* Título da oferta */}
           <h3 className="font-display text-3xl font-medium text-secondary mb-8">
-            Comece hoje a transformação do sono do seu bebê
+            Talvez o problema não seja aquilo que você imagina.
           </h3>
 
-          {/* Preço */}
-          <div className="mb-8">
-            <div className="text-5xl font-display font-bold text-primary mb-2">
-              R$ 497,00 <span className="text-2xl font-normal">à vista</span>
-            </div>
-            <p className="text-on-surface-variant text-base mb-4">
-              💳 Ou em <strong>12x de R$ 48,91</strong>
+          <div className="text-lg text-on-surface-variant space-y-4 leading-relaxed mb-8">
+            <p>
+              Muitas famílias chegam acreditando que o problema está apenas na rotina, na amamentação ou em alguma associação de sono.
+            </p>
+            <p>
+              Mas quando investigamos as 5 Dimensões do Sono, frequentemente encontramos fatores que estavam passando despercebidos.
+            </p>
+            <p>
+              Se você ainda não sabe o que está causando tantos despertares, o próximo passo é descobrir.
             </p>
           </div>
 
-          {/* CTA principal */}
-          <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" className="w-full text-lg mb-8">
-            SIM, QUERO ACESSAR O CURSO AGORA
+          {/* CTA principal com tamanho padrão */}
+          <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default" className="mb-8">
+            Solicitar Avaliação
           </Button>
 
           {/* Garantia */}

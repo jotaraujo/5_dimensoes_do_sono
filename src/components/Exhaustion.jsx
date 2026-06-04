@@ -14,7 +14,7 @@ export default function Exhaustion() {
 
         {/* Imagens empilhadas */}
         <div ref={imageRef} className="order-2 md:order-1 relative h-120 fade-in-left">
-          {/* Imagem principal — PNG com fundo transparente */}
+          {/* Imagem principal */}
           <div className="relative z-10 w-4/5 ml-auto rounded-3xl shadow-ambient aspect-4/5
             bg-linear-to-b from-primary-container/40 to-secondary-container/30 flex items-end justify-center overflow-hidden">
             <img
@@ -63,9 +63,14 @@ export default function Exhaustion() {
           <p className="text-base text-on-surface-variant leading-relaxed">
             Nem todo despertar tem a mesma causa. Por isso desenvolvi o Método 5 Dimensões do Sono para identificar o que realmente está impactando o sono da criança.
           </p>
-          <div>
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline">
+
+          {/* Botões com dimensões padronizadas */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" size="default">
               Conhecer a Mentoria
+            </Button>
+            <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
+              Solicitar Avaliação
             </Button>
           </div>
         </div>
