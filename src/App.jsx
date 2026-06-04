@@ -8,8 +8,8 @@ import CasoReal from './components/CasoReal'
 import AboutMe from './components/AboutMe'
 import Testimonials from './components/Testimonials'
 import PathSelector from './components/PathSelector'
-import Offer from './components/Offer'
 import FAQ from './components/FAQ'
+import Offer from './components/Offer'
 import Footer from './components/Footer'
 import StickyCta from './components/StickyCta'
 
@@ -18,7 +18,7 @@ import StickyCta from './components/StickyCta'
  *
  * Ordem das seções:
  * Hero → Dor → Identificação → Método → Como Funciona → Quiz → Caso Real
- * → Sobre mim → Depoimentos → Qual Caminho → Oferta → FAQ → Footer
+ * → Sobre mim → Depoimentos → Qual Caminho → FAQ → Oferta → Footer
  *
  * Estrutura AIDA: Atenção → Interesse → Desejo → Ação
  */
@@ -56,11 +56,11 @@ export default function App() {
         {/* 9. DECISÃO — Curso ou Mentoria? */}
         <PathSelector />
 
-        {/* 10. AÇÃO — Oferta e garantia */}
-        <Offer />
-
-        {/* 11. OBJEÇÕES — FAQ */}
+        {/* 10. OBJEÇÕES — FAQ */}
         <FAQ />
+
+        {/* 11. AÇÃO — Oferta */}
+        <Offer />
       </main>
 
       <Footer />

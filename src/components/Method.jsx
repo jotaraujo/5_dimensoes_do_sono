@@ -13,7 +13,7 @@ const dimensions = [
   {
     icon: essenciaImg,
     title: 'ESSÊNCIA',
-    description: 'Nem todos os bebés precisam das mesmas estratégias para dormir. Temperamento, perfil sensorial e fase do desenvolvimento influenciam diretamente a forma como cada criança adormece e desperta. Nessa dimensão avaliamos:\n- Temperamento\n- Perfil sensorial\n- Necessidade de movimento\n- Sensibilidade emocional\n- Fase do desenvolvimento',
+    description: 'Nem todos os bebês precisam das mesmas estratégias para dormir. Temperamento, perfil sensorial e fase do desenvolvimento influenciam diretamente a forma como cada criança adormece e desperta. Nessa dimensão avaliamos:\n- Temperamento\n- Perfil sensorial\n- Necessidade de movimento\n- Sensibilidade emocional\n- Fase do desenvolvimento',
     color: '#9cdbbd',
     border: '#9cdbbd',
   },

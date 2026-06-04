@@ -64,11 +64,8 @@ export default function Exhaustion() {
             Nem todo despertar tem a mesma causa. Por isso desenvolvi o Método 5 Dimensões do Sono para identificar o que realmente está impactando o sono da criança.
           </p>
 
-          {/* Botões com dimensões padronizadas */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" size="default">
-              Conhecer a Mentoria
-            </Button>
+          {/* Botão único - Solicitar Avaliação */}
+          <div className="flex justify-center">
             <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
               Solicitar Avaliação
             </Button>

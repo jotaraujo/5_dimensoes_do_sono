@@ -29,24 +29,10 @@ export default function Offer() {
             </p>
           </div>
 
-          {/* CTA principal com tamanho padrão */}
-          <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default" className="mb-8">
+          {/* CTA principal */}
+          <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
             Solicitar Avaliação
           </Button>
-
-          {/* Garantia */}
-          <div className="bg-primary-container border border-primary rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-left">
-            <span className="text-4xl shrink-0">🛡️</span>
-            <div>
-              <h4 className="font-display text-xl font-medium text-on-primary-container mb-1">
-                Garantia Incondicional de 7 Dias
-              </h4>
-              <p className="text-on-primary-container text-sm leading-relaxed opacity-90">
-                Se você aplicar o método e achar que não é para você, devolvemos 100% do seu dinheiro.
-                Sem perguntas, sem burocracia. O risco é todo meu.
-              </p>
-            </div>
-          </div>
         </div>
 
       </div>

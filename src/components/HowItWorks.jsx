@@ -41,9 +41,6 @@ export default function HowItWorks() {
           <h2 className="font-display text-4xl md:text-5xl font-medium text-secondary">
             COMO FUNCIONA O MÉTODO AS 5 DIMENSÕES DO SONO
           </h2>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Um método integrado que investiga as causas dos despertares olhando para a criança como um todo.
-          </p>
         </div>
 
         <div ref={stepsRef} className="space-y-6 max-w-3xl mx-auto fade-in-up delay-200">
