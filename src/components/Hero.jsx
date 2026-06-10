@@ -31,9 +31,6 @@ export default function Hero() {
             <Button href="https://forms.gle/2LaybDMZUWx4W7wf9" target="_blank" variant="primary" size="default">
               Solicitar Avaliação
             </Button>
-            <Button href="https://pay.kiwify.com.br/5nOEc6c" target="_blank" variant="outline" size="default">
-              Conhecer Curso
-            </Button>
           </div>
         </div>
 

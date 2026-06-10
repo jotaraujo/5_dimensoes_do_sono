@@ -1,5 +1,4 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import Button from './ui/Button'
 
 /**
  * PathSelector — Seção de decisão entre Curso Online e Mentoria Individual.
@@ -15,9 +14,6 @@ const paths = [
       'Busca autonomia para analisar e ajustar a rotina do filho',
       'Quer acesso ao método completo por um investimento menor',
     ],
-    cta: 'Quero acessar o Curso',
-    ctaVariant: 'primary',
-    ctaHref: 'https://pay.kiwify.com.br/5nOEc6c',
     cardClass: 'border-primary',
   },
   {
@@ -30,14 +26,11 @@ const paths = [
       'Busca orientação personalizada',
       'Precisa de um plano adaptado à realidade da família',
     ],
-    cta: 'Solicitar Avaliação',
-    ctaVariant: 'outline',
-    ctaHref: 'https://forms.gle/2LaybDMZUWx4W7wf9',
     cardClass: 'border-secondary',
   },
 ]
 
-function PathCard({ tag, tagColor, title, benefits, cta, ctaVariant, ctaHref, cardClass }) {
+function PathCard({ tag, tagColor, title, benefits, cardClass }) {
   const cardRef = useScrollAnimation()
 
   return (
@@ -66,16 +59,6 @@ function PathCard({ tag, tagColor, title, benefits, cta, ctaVariant, ctaHref, ca
           </li>
         ))}
       </ul>
-
-      {/* Botão com largura total dentro do card */}
-      <Button
-        href={ctaHref}
-        target="_blank"
-        variant={ctaVariant}
-        size="full"
-      >
-        {cta}
-      </Button>
     </div>
   )
 }
