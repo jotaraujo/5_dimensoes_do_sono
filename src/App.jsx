@@ -12,7 +12,6 @@ import PathSelector from './components/PathSelector'
 import Course from './components/Course'
 import Mentoria from './components/Mentoria'
 import FAQ from './components/FAQ'
-import Offer from './components/Offer'
 import Footer from './components/Footer'
 import StickyCta from './components/StickyCta'
 
@@ -72,7 +71,6 @@ export default function App() {
 				<FAQ />
 
 				{/* 11. AÇÃO — Oferta */}
-				<Offer />
 			</main>
 
 			<Footer />

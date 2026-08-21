@@ -49,7 +49,6 @@ const faqs = [
 			'Essa é justamente a situação de muitas famílias que chegam até nós. Em muitos casos, o problema não está na rotina, na associação de sono ou no ambiente isoladamente, mas na interação entre diferentes fatores. O Método As 5 Dimensões do Sono foi criado para olhar o sono infantil de forma mais ampla, identificando causas que frequentemente passam despercebidas.',
 	},
 ]
-
 /**
  * Item individual do FAQ usando estado local para controlar abertura.
  * Obs: Usamos useState em vez de <details> nativo para ter controle
@@ -107,3 +106,4 @@ export default function FAQ() {
 		</section>
 	)
 }
+
