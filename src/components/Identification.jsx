@@ -99,12 +99,12 @@ export default function Identification() {
 					className='text-center mt-10 max-w-2xl mx-auto leading-relaxed fade-in-up delay-400'
 				>
 					<p className='text-lg text-on-surface-variant'>
-						Se você se identificou com mais de uma dessas situações, talvez o
-						problema não esteja apenas na rotina ou na forma de adormecer.
+						Se você se identificou com mais de uma dessas situações, provavelmente
+						não precisa de mais uma dica isolada.
 					</p>
-					<p className='text-lg text-on-surface-variant'>
-						O sono infantil é influenciado por diversos fatores, e é exatamente
-						por isso que criamos o Método As 5 Dimensões do Sono.
+					<p className='text-lg text-on-surface-variant font-medium mt-2'>
+						Precisa de uma forma organizada de entender o que está acontecendo e
+						decidir por onde começar.
 					</p>
 				</div>
 			</div>
