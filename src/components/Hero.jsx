@@ -1,10 +1,42 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
 import heroImg from '../assets/hero.jpeg'
+import { CHECKOUT_ACTIVE, PRICE_ACTIVE, DATE_ACTIVE } from '../constants/checkout'
 
+/**
+ * Hero — primeira dobra da landing page de venda do curso.
+ *
+ * Objetivo (segundo briefing): deixar claro em poucos segundos o problema,
+ * o produto (curso), o diferencial e a ação desejada.
+ *
+ * O curso é o produto principal; a Mentoria foi removida como opção comercial.
+ *
+ * O preço ativo (PRICE_ACTIVE) e a data de fim (DATE_ACTIVE) são
+ * derivados automaticamente em src/constants/checkout.js com base na data
+ * corrente. Quando CHECKOUT_ACTIVE for CHECKOUT_OFFICIAL, DATE_ACTIVE
+ * será undefined e o texto de data não é exibido.
+ */
 export default function Hero() {
 	const textRef = useScrollAnimation()
 	const imageRef = useScrollAnimation()
+
+	// Formata a data no formato DD/MM (se existir)
+	const formatDate = (dateStr) => {
+		if (!dateStr) return null
+		const [, month, day] = dateStr.split('-')
+		return `${day}/${month}`
+	}
+
+	// Texto do preço ativo conforme o checkout selecionado
+	const priceText = (() => {
+		if (CHECKOUT_ACTIVE === 'https://pay.kiwify.com.br/g0SED7e') {
+			return `Preço inaugural: R$ ${PRICE_ACTIVE} — até ${formatDate(DATE_ACTIVE)}`
+		}
+		if (CHECKOUT_ACTIVE === 'https://pay.kiwify.com.br/lDy4qKE') {
+			return `Promoção de Novembro: R$ ${PRICE_ACTIVE} — até ${formatDate(DATE_ACTIVE)}`
+		}
+		return `R$ ${PRICE_ACTIVE}`
+	})()
 
 	return (
 		<section className='bg-surface-container-low min-h-[85vh] flex items-center pt-8 md:pt-0'>
@@ -17,40 +49,64 @@ export default function Hero() {
 					{/* Headline */}
 					<h1 className='font-display text-4xl md:text-4xl lg:text-[2.5rem] font-semibold text-primary leading-[1.15] tracking-tight text-balance'>
 						Seu bebê continua acordando, resistindo ao sono ou dependendo de
-						muita ajuda para dormir e você já não sabe mais o que mudar?
+						muita ajuda para dormir — e você já não sabe mais o que mudar?
 					</h1>
 
 					{/* Corpo do texto */}
 					<div className='flex flex-col gap-4 max-w-xl'>
 						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty'>
-							O Método 5 Dimensões do Sono investiga o que sustenta a
-							dificuldade do seu bebê e transforma essa leitura em um plano de
-							ação individual: o que manter, o que organizar e o que deve ser
-							mudado para construir um sono mais sustentável para toda a
-							família.
+							O As 5 Dimensões do Sono é um curso completo para ajudar você a
+							compreender o que está acontecendo, identificar o que realmente
+							precisa mudar e conduzir essas mudanças com clareza, passo a passo.
 						</p>
 						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty'>
-							Na Mentoria, eu acompanho a implementação dessas mudanças passo a
-							passo - incluindo rotina, associações de sono, participação dos
-							cuidadores, adaptação ao berço, redução de ajuda, despertares e
-							sonecas, quando esses forem os pontos que o caso precisa.
-						</p>
-						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty font-medium'>
-							Sem técnica pronta. Sem promessas irreais. Com investigação,
-							estratégia e direção.
+							Você vai aprender a olhar para oono através de Essência, Corpo,
+							Vínculo, Ambiente e Rotina e transformar essa investigação em
+							decisões práticas sobre rotina, associações, berço, despertares,
+							sonecas e formas de adormecer.
 						</p>
 					</div>
 
-					{/* CTA — Botão com largura adaptada ao novo texto */}
-					<div className='pt-3 flex flex-col sm:flex-row gap-4'>
+					{/* Linha destaque — fluxo do método (arquitetura do curso) */}
+					<div className='flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-widest text-secondary'>
+						<span className='bg-secondary-container text-secondary rounded-full px-3 py-1.5'>
+							COMPREENDER
+						</span>
+						<span className='text-secondary/40'>→</span>
+						<span className='bg-secondary-container text-secondary rounded-full px-3 py-1.5'>
+							ORGANIZAR
+						</span>
+						<span className='text-secondary/40'>→</span>
+						<span className='bg-secondary-container text-secondary rounded-full px-3 py-1.5'>
+							DECIDIR
+						</span>
+						<span className='text-secondary/40'>→</span>
+						<span className='bg-secondary-container text-secondary rounded-full px-3 py-1.5'>
+							INTERVIR
+						</span>
+						<span className='text-secondary/40'>→</span>
+						<span className='bg-secondary-container text-secondary rounded-full px-3 py-1.5'>
+							CONSOLIDAR
+						</span>
+					</div>
+
+					{/* CTA + preço ativo */}
+					<div className='pt-2 flex flex-col sm:flex-row gap-4 items-start sm:items-center'>
+						<div className='inline-flex items-center gap-2 text-sm font-semibold text-secondary bg-secondary-container/60 rounded-full px-4 py-1.5'>
+							<span
+								className='w-2 h-2 rounded-full bg-secondary animate-pulse'
+								aria-hidden='true'
+							/>
+							{priceText}
+						</div>
 						<Button
-							href='https://wa.me/5521994924368?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20de%20Sono%20Infantil.'
+							href={CHECKOUT_ACTIVE}
 							target='_blank'
 							variant='primary'
 							size='default'
 							className='w-full sm:w-auto whitespace-normal text-center leading-snug px-6 py-4 text-base md:text-lg'
 						>
-							Quero saber se a Mentoria é para minha família
+							Quero conhecer o curso
 						</Button>
 					</div>
 				</div>
@@ -58,12 +114,12 @@ export default function Hero() {
 				{/* Coluna de imagem */}
 				<div
 					ref={imageRef}
-					className='relative h-125 md:h-145 w-full hidden md:block fade-in-right'
+				 className='relative h-125 md:h-145 w-full hidden md:block fade-in-right'
 				>
 					<div className='relative z-10 w-full h-full rounded-3xl overflow-hidden shadow-ambient'>
 						<img
 							src={heroImg}
-							alt='Mãe e bebê dormindo tranquilamente'
+							alt='Capa do curso As 5 Dimensões do Sono'
 							className='w-full h-full object-cover'
 						/>
 						<div className='absolute inset-0 hero-image-overlay' />
