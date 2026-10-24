@@ -1,102 +1,79 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
+import { CHECKOUT_ACTIVE, CHECKOUT_LAUNCH, CHECKOUT_NOVEMBER, CHECKOUT_OFFICIAL } from '../constants/checkout'
 
 /**
- * Course — Seção dedicada ao Curso Online (Método 5 Dimensões do Sono).
- * Versão standalone do antigo PathCard "CURSO ONLINE".
+ * Course — Seção de oferta do curso.
+ * Pode aparecer na página mais para o início (pré-oferta) ou no fechamento
+ * da página, conforme o ciclo de vendas.
+ *
+ * Conteúdo segundo briefing item 13:
+ * - Título: "As 5 Dimensões do Sono — Método Completo"
+ * - Inclui: curso completo + módulos investigação, organização, decisão, intervenção,
+ *   despertares, sonecas, vida real, consolidação + materiais de apoio + guia dos primeiros meses.
+ * - Condição inaugural: R$97 de 30/10 a 06/11.
+ * - Mensagem de urgência.
+ * - Preço depois: A partir de 07/11 → R$197, preço oficial posterior: R$397.
+ * - CTA: "Quero entrar no As 5 Dimensões do Sono".
+ * - Observação: não apresentar como "de R$397 por R$97". Tratar como condição
+ *   inaugural de lançamento.
  */
 export default function Course() {
-  const headingRef = useScrollAnimation()
-  const cardRef = useScrollAnimation()
+	const cardRef = useScrollAnimation()
 
-  return (
-    <section className="section-padding bg-background" id="curso">
-      <div className="container-max">
+  // Preço de lançamento
+  const priceLaunch = 'https://pay.kiwify.com.br/g0SED7e' 
+	// Preço de novembro, quando ativo
+	const priceNovember = 'https://pay.kiwify.com.br/lDy4qKE'
+	// Preço oficial
+	const priceOfficial = 'https://pay.kiwify.com.br/eSd350h'
 
-        {/* Cabeçalho da seção */}
-        <div ref={headingRef} className="text-center mb-10 fade-in-up">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary-container text-primary mb-4">
-            Curso Online
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-primary leading-tight text-balance">
-            Para quem quer entender o que está acontecendo e aprender a conduzir as mudanças com mais clareza e autonomia
-          </h2>
-        </div>
+	return (
+		<section className='section-padding bg-surface-container' id='oferta'>
+			<div className='container-max'>
+				<div
+					ref={cardRef}
+					className='bg-white rounded-3xl p-8 md:p-12 shadow-ambient max-w-2xl mx-auto border-2 border-primary text-center fade-in-up delay-200'
+				>
+					{/* Título da oferta */}
+					<h3 className='font-display text-3xl font-medium text-secondary mb-8'>
+						As 5 Dimensões do Sono — Método Completo
+					</h3>
 
-        {/* Card principal */}
-        <div
-          ref={cardRef}
-          className="bg-white rounded-3xl p-8 md:p-10 shadow-ambient border-2 border-primary flex flex-col gap-6 fade-in-up max-w-4xl mx-auto"
-        >
-          {/* Texto introdutório */}
-          <div className="flex flex-col gap-4 max-w-3xl">
-            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty">
-              O curso é a versão completa do Método 5 Dimensões do Sono para famílias que querem compreender melhor o sono do bebê e aprender a aplicar, no próprio ritmo, uma sequência organizada de investigação e intervenção.
-            </p>
-            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty">
-              Você aprende a observar o sono pelas 5 Dimensões, organizar a base, identificar o que precisa mudar e conduzir mudanças progressivas na forma de adormecer, nas associações, no berço, nos despertares e nas sonecas — quando esses pontos fizerem parte da dificuldade da sua família.
-            </p>
-            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty">
-              Mais do que assistir a aulas sobre sono, a proposta é ajudar você a sair da tentativa e erro e ter critérios mais claros para decidir o que fazer, quando manter uma estratégia, quando avançar e quando rever o caminho.
-            </p>
-          </div>
+					<div className='text-lg text-on-surface-variant space-y-4 leading-relaxed'>
+						<p>
+							Curso completo + módulos de investigação, organização, decisão,
+							intervenção, despertares, sonecas, vida real, consolidação
+							+ materiais de apoio + guia dos primeiros meses.
+						</p>
+						<p>
+							Condição inaugural: R$97 de 30/10 a 06/11.
+						</p>
+						<p className='text-sm md:text-base text-primary font-medium italic leading-relaxed'>
+							Esse é o menor valor que esta versão do curso terá. Quando essa condição terminar, ela não volta.
+						</p>
+					</div>
 
-          {/* O que você encontra no curso */}
-          <div className="pt-2">
-            <p className="font-display text-xl font-medium text-on-surface mb-4">
-              No curso, você encontra:
-            </p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
-              {[
-                'o Método 5 Dimensões do Sono passo a passo;',
-                'orientação para observar e compreender o padrão atual de sono;',
-                'organização de rotina, sonecas, horário noturno e ambiente;',
-                'critérios para avaliar associações de sono e decidir quando modificá-las;',
-                'estratégias progressivas para construir novas formas de adormecer;',
-                'orientação para adaptação ao berço e redução de assistência;',
-                'estratégias para despertares noturnos;',
-                'orientação para sonecas e transições;',
-                'módulo de dificuldades comuns e ajustes;',
-                'materiais de apoio para aplicar o método em casa.',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-on-surface-variant">
-                  <span className="mt-1 shrink-0 w-5 h-5 rounded-full bg-primary-container flex items-center justify-center text-primary text-xs font-bold">
-                    ✓
-                  </span>
-                  <span className="leading-relaxed text-base md:text-[0.95rem]">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+					<div className='mt-4 max-w-2xl mx-auto text-sm text-on-surface-variant space-y-2 leading-relaxed'>
+						<p className='text-primary font-medium'>
+							A partir de 07/11, a oferta passa para R$197 no restante de
+							novembro. O preço oficial posterior será R$397.
+						</p>
+					</div>
 
-          {/* Indicação + aviso */}
-          <div className="flex flex-col gap-3 pt-2 border-t border-primary/10">
-            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty font-medium">
-              O curso é indicado para quem deseja aprender o método e aplicar as orientações com mais autonomia, no próprio ritmo.
-            </p>
-            <p className="text-sm md:text-base text-primary font-medium italic">
-              Nova versão em atualização. Entre em contato para saber sobre a próxima liberação.
-            </p>
-          </div>
-
-          {/* CTA */}
-          <div className="pt-2 flex flex-col items-center gap-2">
-            <Button
-              href="https://wa.me/5521994924368?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20curso%20As%205%20Dimens%C3%B5es%20do%20Sono."
-              target="_blank"
-              variant="primary"
-              size="default"
-              className="w-full sm:w-auto whitespace-normal text-center leading-snug px-6 py-4 text-base md:text-lg"
-            >
-              Quero saber mais sobre o Curso
-            </Button>
-            <p className="text-xs md:text-sm text-on-surface-variant text-center max-w-md">
-              Ao clicar, você será direcionada para o WhatsApp para receber mais informações sobre o curso.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  )
+					{/* CTA principal */}
+					<div className='flex justify-center mt-6 gap-3'>
+						<Button
+							href={CHECKOUT_ACTIVE === priceLaunch ? CHECKOUT_LAUNCH : CHECKOUT_OFFICIAL ? CHECKOUT_NOVEMBER : CHECKOUT_OFFICIAL}
+							target='_blank'
+							variant='primary'
+							size='default'
+						>
+							Quero entrar no As 5 Dimensões do Sono
+						</Button>
+					</div>
+				</div>
+			</div>
+		</section>
+	)
 }
