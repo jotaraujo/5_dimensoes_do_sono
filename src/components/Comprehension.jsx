@@ -91,7 +91,7 @@ export default function Comprehension() {
 							variant='primary'
 							size='default'
 						>
-							Quero aprender esse método
+							Quero aprender o método
 						</Button>
 					</div>
 				</div>
