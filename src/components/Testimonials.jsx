@@ -102,12 +102,12 @@ export default function Testimonials() {
 				{/* CTA após depoimentos */}
 				<div className='text-center mt-14'>
 					<Button
-						href='https://forms.gle/2LaybDMZUWx4W7wf9'
+						href='https://pay.kiwify.com.br/g0SED7e'
 						target='_blank'
 						variant='primary'
 						size='default'
 					>
-						Solicitar Avaliação
+						Quero conhecer o curso
 					</Button>
 				</div>
 			</div>
