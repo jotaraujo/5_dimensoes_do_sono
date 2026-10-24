@@ -8,6 +8,7 @@ import rotinaImg from '../assets/rotina.png'
 import Button from './ui/Button'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import DimensionCard from './ui/DimensionCard'
+import { CHECKOUT_LAUNCH } from '../constants/checkout'
 
 const dimensions = [
 	{
@@ -64,8 +65,8 @@ export default function Method() {
 						AS 5 DIMENSÕES DO SONO
 					</h2>
 					<p className='text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed'>
-						Um método integrado que investiga as causas dos despertares olhando
-						para a criança como um todo.
+						Um método integrado para compreender o sono do bebê como um todo e
+						identificar quais informações realmente mudam uma decisão.
 					</p>
 				</div>
 
@@ -82,20 +83,13 @@ export default function Method() {
 				{/* Texto de fechamento com botão padronizado */}
 				<div className='text-center mt-12 max-w-2xl mx-auto flex flex-col items-center gap-4'>
 					<p className='text-lg text-on-surface-variant leading-relaxed'>
-						As 5 Dimensões não são o ponto final.
+						As 5 Dimensões não são cinco problemas que precisamos corrigir.
 					</p>
 					<p className='text-lg text-on-surface-variant leading-relaxed'>
-						Elas servem para construir uma hipótese sobre o que sustenta a
-						dificuldade e decidir qual mudança deve vir primeiro.
+						São cinco lentes que nos ajudam a descobrir o que pode permanecer, o
+						que precisa ser organizado, o que realmente precisa mudar e o que
+						ainda precisa ser investigado.
 					</p>
-					<Button
-						href='https://forms.gle/2LaybDMZUWx4W7wf9'
-						target='_blank'
-						variant='outline'
-						size='default'
-					>
-						Solicitar Avaliação
-					</Button>
 				</div>
 			</div>
 		</section>
