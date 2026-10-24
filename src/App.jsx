@@ -4,13 +4,13 @@ import Identification from './components/Identification'
 import Method from './components/Method'
 import Results from './components/Results'
 import HowItWorks from './components/HowItWorks'
-import Quiz from './components/Quiz'
+import Modules from './components/Modules'
+import Bonus from './components/Bonus'
+import NaPratica from './components/NaPratica'
 import CasoReal from './components/CasoReal'
 import AboutMe from './components/AboutMe'
 import Testimonials from './components/Testimonials'
-import PathSelector from './components/PathSelector'
 import Course from './components/Course'
-import Mentoria from './components/Mentoria'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import StickyCta from './components/StickyCta'
@@ -18,59 +18,63 @@ import StickyCta from './components/StickyCta'
 /**
  * App — componente raiz que monta a landing page completa.
  *
- * Ordem das seções:
- * Hero → Dor → Identificação → Método → Como Funciona → Quiz → Caso Real
- * → Sobre mim → Depoimentos → Qual Caminho → FAQ → Oferta → Footer
+ * Ordem das seções (após a reorientação do briefing):
+ * Hero → Identificação → Posicionamento → 5 Dimensões → Diferencial do Método
+ * → Conteúdo do curso → Materiais de apoio → Caso Real → Depoimentos
+ * → Sobre Fernanda → Oferta → FAQ → CTA final → Footer
  *
  * Estrutura AIDA: Atenção → Interesse → Desejo → Ação
+ *
+ * O produto principal é o CURSO. A Mentoria é removida como opção
+ * comercial e todos os CTAs direcionam ao checkout do curso.
  */
 export default function App() {
 	return (
 		<>
 			<main>
-				{/* 1. ATENÇÃO — Captura o visitante */}
+				{/* 1. ATENÇÃO — Captura o visitante (curso como produto principal) */}
 				<Hero />
 
-				{/* 2. INTERESSE — Identifica a dor */}
-				<Comprehension />
-
-				{/* 2.5. INTERESSE — Identificação */}
+				{/* 2. INTERESSE — Identificação com dores reais */}
 				<Identification />
 
-				{/* 3. INTERESSE — Apresenta a solução */}
+				{/* 3. INTERESSE — Posicionamento do método */}
+				<Comprehension />
+
+				 {/* 4. INTERESSE — As 5 Dimensões (lentes do método) */}
 				<Method />
 
-				{/* 3.1. INTERESSE — Resultados esperados */}
+				 {/* 5. INTERESSE — Resultados que o método constrói */}
 				<Results />
 
-				{/* 4. DESEJO — Detalha o que vai receber */}
+				 {/* 6. DESEJO — Diferencial do método (COMPREENDER → CONSOLIDAR) */}
 				<HowItWorks />
 
-				{/* 5. DESEJO — Quiz */}
-				<Quiz />
+				 {/* 7. DESEJO — Conteúdo do curso (módulos) */}
+				<Modules />
 
-				{/* 6. CONFIANÇA — Caso Real */}
+				 {/* 8. DESEJO — Materiais de apoio da entrega */}
+				<Bonus />
+
+				 {/* 9. DESEJO — Na prática, o que você vai aprender */}
+				<NaPratica />
+
+				 {/* 10. CONFIANÇA — Caso real como prova do raciocínio */}
 				<CasoReal />
 
-				{/* 7. CONFIANÇA — Quem é a especialista */}
+				 {/* 11. CONFIANÇA — Quem é a especialista */}
 				<AboutMe />
 
-				{/* 8. PROVA SOCIAL — Resultados de outras mães */}
+				 {/* 12. PROVA SOCIAL — Resultados de outras famílias */}
 				<Testimonials />
 
-				{/* 9. DECISÃO — Bifurcação: Qual formato faz sentido? */}
-				<PathSelector />
-
-				{/* 9.1. DECISÃO — Mentoria Individual (detalhamento) */}
-				<Mentoria />
-
-				{/* 9.2. DECISÃO — Curso Online (detalhamento) */}
+				 {/* 13. AÇÃO — Oferta principal do curso (R$97) */}
 				<Course />
 
-				{/* 10. OBJEÇÕES — FAQ */}
+				 {/* 14. OBJEÇÕES — FAQ (sem Mentoria) */}
 				<FAQ />
 
-				{/* 11. AÇÃO — Oferta */}
+				 {/* 15. AÇÃO — Oferta final / encerramento */}
 			</main>
 
 			<Footer />
