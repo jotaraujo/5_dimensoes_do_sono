@@ -60,7 +60,7 @@ export default function Hero() {
 							precisa mudar e conduzir essas mudanças com clareza, passo a passo.
 						</p>
 						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty'>
-							Você vai aprender a olhar para oono através de Essência, Corpo,
+							Você vai aprender a olhar para o sono através de Essência, Corpo,
 							Vínculo, Ambiente e Rotina e transformar essa investigação em
 							decisões práticas sobre rotina, associações, berço, despertares,
 							sonecas e formas de adormecer.

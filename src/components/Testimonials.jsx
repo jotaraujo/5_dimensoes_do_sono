@@ -54,7 +54,7 @@ export default function Testimonials() {
 			<div className='container-max'>
 				<div ref={headingRef} className='text-center mb-10 fade-in-up'>
 					<h2 className='font-display text-4xl md:text-5xl font-medium text-white'>
-						Quando compreender o sono leva a uma mudança real
+						Famílias que já viveram esse processo
 					</h2>
 					<p className='text-lg text-primary-fixed-dim mt-4 max-w-xl mx-auto'>
 						Cada bebê chegou com uma história diferente. A partir da

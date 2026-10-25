@@ -17,7 +17,10 @@ export default function NaPratica() {
 	return (
 		<section className='section-padding bg-surface-container' id='na-pratica'>
 			<div className='container-max'>
-				<h2 ref={headingRef} className='font-display text-4xl md:text-5xl font-medium text-secondary mb-4 fade-in-up'>
+				<h2
+					ref={headingRef}
+					className='font-display text-4xl md:text-5xl font-medium text-secondary mb-4 fade-in-up'
+				>
 					Na prática, você vai aprender...
 				</h2>
 				<p className='text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-10 fade-in-up delay-200'>
@@ -29,7 +32,7 @@ export default function NaPratica() {
 				{/* Lista de problemas concretos que a mãe reconhece */}
 				<div
 					ref={listRef}
-					className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto fade-in-up delay-400 cursor-pointer'
+					className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto fade-in-up delay-400'
 				>
 					{[
 						'Mamãe para dormir é colo',
@@ -53,15 +56,18 @@ export default function NaPratica() {
 								{item}
 							</span>
 						</div>
-						))}
+					))}
 				</div>
 
 				{/* Texto de fechamento */}
-				<div className='text-center mt-12 max-w-2xl mx-auto fade-in-up delay-600'>
-					<p className='text-base md:text-lg text-on-surface-variant leading-relaxed font-medium'>
-						Nem todos esses pontos precisarão ser modificados no seu bebê. O curso
-						existe justamente para ajudar você a descobrir quais realmente precisam
-						entrar no plano.
+				<div
+					ref={useScrollAnimation()}
+					className='text-center mt-12 max-w-2xl mx-auto fade-in-up delay-600'
+				>
+					<p className='text-base md:text-lg text-secondary leading-relaxed font-medium'>
+						Nem todos esses pontos precisarão ser modificados no seu bebê. O
+						curso existe justamente para ajudar você a descobrir quais realmente
+						precisam entrar no plano.
 					</p>
 
 					{/* CTA para o curso */}

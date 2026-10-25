@@ -23,22 +23,22 @@ export default function Identification() {
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
 								✓
 							</span>
-							<span>Seu bebê acorda várias vezes durante a noite</span>
+							<span>Seu bebê acorda várias vezes durante a noite.</span>
 						</li>
 						<li className='flex items-start gap-3'>
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
 								✓
 							</span>
 							<span>
-								Só adormece mamando, ninando ou no colo.{' '}
-								<span className='text-secondary'>e isso deixou de ser sustentável para vocês</span>
+								Só adormece mamando, ninando ou no colo e isso deixou de ser
+								sustentável para vocês.
 							</span>
 						</li>
 						<li className='flex items-start gap-3'>
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
 								✓
 							</span>
-							<span>Acorda sempre que é transferido ou rejeita o berço</span>
+							<span>Acorda sempre que é transferido ou rejeita o berço.</span>
 						</li>
 						<li className='flex items-start gap-3'>
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
@@ -46,7 +46,7 @@ export default function Identification() {
 							</span>
 							<span>
 								Demora muito para adormecer, brinca, protesta ou parece lutar
-								contra o sono
+								contra o sono.
 							</span>
 						</li>
 						<li className='flex items-start gap-3'>
@@ -55,14 +55,14 @@ export default function Identification() {
 							</span>
 							<span>
 								As sonecas são curtas, difíceis ou desorganizam o restante do
-								dia
+								dia.
 							</span>
 						</li>
 						<li className='flex items-start gap-3'>
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
 								✓
 							</span>
-							<span>Apenas um cuidador consegue fazê-lo dormir</span>
+							<span>Apenas um cuidador consegue fazê-lo dormir.</span>
 						</li>
 						<li className='flex items-start gap-3'>
 							<span className='mt-1 shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold'>
@@ -70,7 +70,7 @@ export default function Identification() {
 							</span>
 							<span>
 								Você já fez ajustes de rotina e ambiente, mas sente que isso não
-								resolveu o problema
+								resolveu o problema.
 							</span>
 						</li>
 						<li className='flex items-start gap-3'>
@@ -79,7 +79,7 @@ export default function Identification() {
 							</span>
 							<span>
 								Você quer fazer mudanças, mas não sabe qual deve ser a primeira
-								nem como reagir se houver resistência ou choro
+								nem como reagir se houver resistência ou choro.
 							</span>
 						</li>
 						<li className='flex items-start gap-3'>
@@ -88,7 +88,7 @@ export default function Identification() {
 							</span>
 							<span>
 								Você está cansada de testar estratégias sem saber por que está
-								fazendo cada uma
+								fazendo cada uma.
 							</span>
 						</li>
 					</ul>
@@ -99,8 +99,8 @@ export default function Identification() {
 					className='text-center mt-10 max-w-2xl mx-auto leading-relaxed fade-in-up delay-400'
 				>
 					<p className='text-lg text-on-surface-variant'>
-						Se você se identificou com mais de uma dessas situações, provavelmente
-						não precisa de mais uma dica isolada.
+						Se você se identificou com mais de uma dessas situações,
+						provavelmente não precisa de mais uma dica isolada.
 					</p>
 					<p className='text-lg text-on-surface-variant font-medium mt-2'>
 						Precisa de uma forma organizada de entender o que está acontecendo e

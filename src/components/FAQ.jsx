@@ -4,49 +4,54 @@ import Button from './ui/Button'
 
 const faqs = [
 	{
-		question: 'Para qual idade o método funciona?',
+		question: 'Para qual idade o curso é indicado?',
 		answer:
-			'O Método As 5 Dimensões do Sono pode ser aplicado desde o nascimento até os 3 anos de idade. Tanto no curso quanto na mentoria, as orientações respeitam as características neurológicas, emocionais e físicas de cada fase do desenvolvimento infantil.',
+			'O curso é recomendado para crianças em idades de 0 a 3 anos. Para os primeiros três meses, há um guia específico, porque nessa fase as prioridades e expectativas são diferentes.',
 	},
 	{
-		question: 'Meu bebê só dorme mamando. Você vai mandar retirar o peito?',
+		question: 'Meu bebê mama para dormir. O curso serve para mim?',
 		answer:
-			'Não automaticamente. Primeiro avaliamos se essa forma de adormecer é realmente um problema para a família e quais outros fatores participam do sono. Quando a família deseja mudar, trabalhamos de forma progressiva, ampliando outras formas de conforto e preservando mamadas necessárias.',
+			'Sim. Existe conteúdo específico sobre mamar para dormir e, principalmente, sobre como avaliar se essa associação realmente precisa fazer parte da mudança.',
 	},
 	{
-		question: 'Qual a diferença entre Curso e Mentoria?',
+		question: 'Preciso tirar o peito?',
 		answer:
-			'O Curso As 5 Dimensões do Sono foi criado para famílias que desejam aplicar o método com autonomia, seguindo um passo a passo completo. Já a Mentoria Individual é indicada para quem busca um acompanhamento personalizado, com análise detalhada, diagnóstico das causas dos despertares e plano de ação adaptado à realidade da família.',
+			'Não necessariamente. O curso não parte do princípio de que o peito é um problema. Primeiro avaliamos o contexto, a necessidade do bebê e o que realmente precisa mudar.',
 	},
 	{
-		question: 'Meu objetivo é o berço. A Mentoria trabalha isso?',
+		question: 'Preciso ensinar meu bebê a dormir sozinho?',
 		answer:
-			'Sim, quando esse é um objetivo da família e o caso está preparado para essa etapa. Muitas vezes, antes do berço, precisamos organizar a base ou construir uma nova forma de adormecer. Depois, levamos o processo para o espaço de sono com assistência e reduzimos a ajuda progressivamente.',
+			'Não. O objetivo não é levar todos os bebês ao mesmo modelo de sono. Você define a meta da sua família e aprende a conduzir as mudanças necessárias para alcançá-la. E se você deseja a autonomia, o curso te levará até lá.',
 	},
 	{
-		question: 'Em quanto tempo posso ver resultados?',
+		question: 'O curso promete um processo sem choro?',
 		answer:
-			'Não existe um prazo único para todos os bebês. Algumas mudanças aparecem nos primeiros ajustes; outras exigem mais tempo e consolidação. A Mentoria trabalha com acompanhamento de 45 dias justamente para observar tendências e ajustar as etapas.',
+			'Não. Mudanças podem gerar protesto ou choro. Você aprende a observar a resposta do bebê, oferecer suporte e ajustar o caminho quando necessário. O método não propõe deixar o bebê chorando sozinho.',
 	},
 	{
-		question: 'Como sei se preciso do Curso ou da Mentoria?',
+		question: 'E se meu bebê não aceitar uma mudança?',
 		answer:
-			'Se você gosta de aprender e aplicar as orientações no seu ritmo, o curso pode ser suficiente. Se já tentou diversas estratégias sem sucesso, enfrenta múltiplos despertares, resistência intensa para dormir ou deseja orientação individualizada, a mentoria costuma ser o caminho mais indicado.',
+			'A resposta do bebê faz parte do processo. Você aprende quando manter, consolidar, reajustar, aumentar ajuda ou recuar uma etapa.',
 	},
 	{
-		question: 'Se eu optar pelo curso, quanto tempo tenho de acesso?',
+		question: 'Tem conteúdo sobre sonecas?',
 		answer:
-			'Você terá acesso ao conteúdo completo, atualizações e materiais complementares por 1 ano, podendo assistir às aulas no seu ritmo e revisitar os conteúdos sempre que precisar.',
+			'Sim. Há um módulo específico sobre sonecas, incluindo sonecas curtas, soneca ponte, prolongamento e transições.',
 	},
 	{
-		question: 'O método promete um processo sem choro?',
+		question: 'Quanto tempo tenho de acesso?',
 		answer:
-			'Não. Mudanças podem gerar protesto, frustração e choro. A proposta é observar o contexto e a intensidade, responder ao bebê e ajustar a quantidade de suporte. Não uso abandono ou deixar o bebê sozinho chorando como resposta automática.',
+			'Você terá 1 ano de acesso ao curso, para assistir às aulas no seu ritmo, aplicar as orientações e voltar aos conteúdos sempre que precisar ao longo desse período.',
 	},
 	{
-		question: 'E se eu já tiver tentado de tudo?',
+		question: 'Tenho suporte para dúvidas?',
 		answer:
-			'Essa é justamente a situação de muitas famílias que chegam até nós. Em muitos casos, o problema não está na rotina, na associação de sono ou no ambiente isoladamente, mas na interação entre diferentes fatores. O Método As 5 Dimensões do Sono foi criado para olhar o sono infantil de forma mais ampla, identificando causas que frequentemente passam despercebidas.',
+			'Sim. Você terá acesso à plataforma de dúvidas 24 horas por dia, 7 dias por semana, durante o período de acesso ao curso. Você poderá enviar suas dúvidas pela plataforma e consultar as orientações disponíveis ao longo da jornada.',
+	},
+		{
+		question: 'Como recebo o acesso?',
+		answer:
+			'Após a confirmação do pagamento, você recebe os dados de acesso ao curso pela plataforma Kiwify.',
 	},
 ]
 /**

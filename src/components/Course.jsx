@@ -36,40 +36,30 @@ export default function Course() {
 					className='bg-white rounded-3xl p-8 md:p-12 shadow-ambient max-w-2xl mx-auto border-2 border-primary text-center fade-in-up delay-200'
 				>
 					{/* Título da oferta */}
-					<h3 className='font-display text-3xl font-medium text-secondary mb-8'>
-						As 5 Dimensões do Sono — Método Completo
-					</h3>
+					<h2 className='font-display text-3xl font-medium text-primary mb-8'>
+						Seu bebê não precisa de mais uma tentativa aleatória. 
+					</h2>
 
 					<div className='text-lg text-on-surface-variant space-y-4 leading-relaxed'>
 						<p>
-							Curso completo + módulos de investigação, organização, decisão,
-							intervenção, despertares, sonecas, vida real, consolidação
-							+ materiais de apoio + guia dos primeiros meses.
+							E você não precisa continuar escolhendo mudanças sem saber exatamente o que está tentando resolver. Aprenda a compreender o cenário, escolher prioridades e conduzir o próximo passo com mais clareza.
 						</p>
-						<p>
-							Condição inaugural: R$97 de 30/10 a 06/11.
-						</p>
+						<h3 className='text-xl font-medium text-secondary'>
+							As 5 Dimensões do Sono — Método Completo
+						</h3>
 						<p className='text-sm md:text-base text-primary font-medium italic leading-relaxed'>
-							Esse é o menor valor que esta versão do curso terá. Quando essa condição terminar, ela não volta.
+							R$97 até 06/11.
 						</p>
 					</div>
-
-					<div className='mt-4 max-w-2xl mx-auto text-sm text-on-surface-variant space-y-2 leading-relaxed'>
-						<p className='text-primary font-medium'>
-							A partir de 07/11, a oferta passa para R$197 no restante de
-							novembro. O preço oficial posterior será R$397.
-						</p>
-					</div>
-
 					{/* CTA principal */}
-					<div className='flex justify-center mt-6 gap-3'>
+					<div className='flex justify-center mt-6 gap-3 uppercase'>
 						<Button
 							href={CHECKOUT_ACTIVE === priceLaunch ? CHECKOUT_LAUNCH : CHECKOUT_OFFICIAL ? CHECKOUT_NOVEMBER : CHECKOUT_OFFICIAL}
 							target='_blank'
 							variant='primary'
 							size='default'
 						>
-							Quero entrar no As 5 Dimensões do Sono
+							Quero começar agora
 						</Button>
 					</div>
 				</div>
