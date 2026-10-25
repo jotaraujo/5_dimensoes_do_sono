@@ -6,9 +6,7 @@ import Results from './components/Results'
 import HowItWorks from './components/HowItWorks'
 import Modules from './components/Modules'
 import NaPratica from './components/NaPratica'
-import TopicsColumns from './components/TopicsColumns'
 import SupportMaterials from './components/SupportMaterials'
-import Bonus from './components/Bonus'
 import Testimonials from './components/Testimonials'
 import CasoReal from './components/CasoReal'
 import AboutMe from './components/AboutMe'
@@ -37,7 +35,7 @@ export default function App() {
 				<HowItWorks />
 				<Modules />
 				<NaPratica />
-				<TopicsColumns />
+				<Course />
 				<SupportMaterials />
 				<Testimonials />
 				<CasoReal />
