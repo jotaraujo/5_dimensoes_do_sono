@@ -2,9 +2,8 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
 import {
 	CHECKOUT_ACTIVE,
-	CHECKOUT_LAUNCH,
-	CHECKOUT_NOVEMBER,
-	CHECKOUT_OFFICIAL,
+	PRICE_NOVEMBER,
+	PRICE_OFFICIAL,
 } from '../constants/checkout'
 
 /**
@@ -25,13 +24,6 @@ import {
  */
 export default function Course() {
 	const cardRef = useScrollAnimation()
-
-	// Preço de lançamento
-	const priceLaunch = 'https://pay.kiwify.com.br/g0SED7e'
-	// Preço de novembro, quando ativo
-	const priceNovember = 'https://pay.kiwify.com.br/lDy4qKE'
-	// Preço oficial
-	const priceOfficial = 'https://pay.kiwify.com.br/eSd350h'
 
 	return (
 		<section className='section-padding bg-surface-container' id='oferta'>
@@ -73,33 +65,19 @@ export default function Course() {
 						{/* Bloco da Condição Inaugural / Lançamento */}
 						<div className='bg-primary/5 p-5 rounded-2xl border-2 border-dashed border-primary/30 max-w-xl mx-auto space-y-2'>
 							{/* Parágrafo 3: Preço de Lançamento */}
-							<p className='text-2xl md:text-3xl font-bold text-primary tracking-tight'>
-								R$97 de 30/10 até 06/11.
+							<p className='text-xl md:text-2xl font-bold text-primary tracking-tight'>
+								Preço com todos os benefícios:
 							</p>
-							{/* Parágrafo 4: Urgência e Escassez */}
-							<p className='text-sm md:text-base text-secondary font-semibold leading-snug'>
-								Esse é o menor valor que esta versão do curso terá.
-								Quando essa condição terminar, ela não volta.
-							</p>
+							<span className='text-2xl md:text-3xl font-bold text-primary tracking-tight'>
+								R$ {PRICE_NOVEMBER}
+							</span>
 						</div>
-
-						{/* Parágrafo 5: Ancoragem de Preço Futuro */}
-						<p className='text-xs md:text-sm text-on-surface-variant/70 italic max-w-lg mx-auto'>
-							A partir de 07/11, a oferta passa para R$ 197 durante o restante
-							de novembro. Preço oficial posterior: R$ 397.
-						</p>
 					</div>
 
 					{/* Botão de Ação */}
 					<div className='flex justify-center mt-8 gap-3 uppercase'>
 						<Button
-							href={
-								CHECKOUT_ACTIVE === priceLaunch
-									? CHECKOUT_LAUNCH
-									: CHECKOUT_OFFICIAL
-										? CHECKOUT_NOVEMBER
-										: CHECKOUT_OFFICIAL
-							}
+							href={CHECKOUT_ACTIVE}
 							target='_blank'
 							variant='primary'
 							size='default'

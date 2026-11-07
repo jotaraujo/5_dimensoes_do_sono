@@ -1,0 +1,30 @@
+							{/* Bloco da Condição de Novembro */}
+							<div className='bg-primary/5 p-5 rounded-2xl border-2 border-dashed border-primary/30 max-w-xl mx-auto space-y-2'>
+								{/* Parágrafo 3: Preço de Novembro */}
+								<p className='text-2xl md:text-3xl font-bold text-primary tracking-tight'>
+									R${PRICE_NOVEMBER} durante o restante de Novembro.
+								</p>
+								{/* Parágrafo 4: Urgência e Escassez */}
+								<p className='text-sm md:text-base text-secondary font-semibold leading-snug'>
+									Esse é o menor valor que esta versão do curso terá.
+									Quando essa condição terminar, ela não volta.
+								</p>
+							</div>
+	
+							{/* Parágrafo 5: Ancoragem de Preço Futuro */}
+							<p className='text-xs md:text-sm text-on-surface-variant/70 italic max-w-lg mx-auto'>
+								A partir de 07/11, a oferta passa para R$ {PRICE_NOVEMBER} durante o restante
+								de novembro. Preço oficial posterior: R$ {PRICE_OFFICIAL}.
+							</p>
+						</div>
+	
+						{/* Botão de Ação */}
+						<div className='flex justify-center mt-8 gap-3 uppercase'>
+							<Button
+								href={CHECKOUT_ACTIVE}
+								target='_blank'
+								variant='primary'
+								size='default'
+							>
+								Quero começar agora
+							</Button>
