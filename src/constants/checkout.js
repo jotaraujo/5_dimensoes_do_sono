@@ -24,28 +24,10 @@ export const LAUNCH_END_DATE = '2026-11-06'
 export const NOVEMBER_END_DATE = '2026-11-30'
 
 // Determina o estado ativo com base na data corrente.
-// Períodos:
-//   - Até 06/11 → lançamento (R$97, CHECKOUT_LAUNCH)
-//   - 07/11 a 30/11 → novembro (R$197, CHECKOUT_NOVEMBER)
-//   - Depois → preço oficial (R$397, CHECKOUT_OFFICIAL)
-const today = new Date().toISOString().slice(0, 10)
+// Forçado para Novembro conforme pedido do usuário.
 
-let CHECKOUT_ACTIVE
-let PRICE_ACTIVE
-let DATE_ACTIVE
-
-if (today <= LAUNCH_END_DATE) {
-  CHECKOUT_ACTIVE = CHECKOUT_LAUNCH
-  PRICE_ACTIVE = PRICE_LAUNCH
-  DATE_ACTIVE = LAUNCH_END_DATE
-} else if (today <= NOVEMBER_END_DATE) {
-  CHECKOUT_ACTIVE = CHECKOUT_NOVEMBER
-  PRICE_ACTIVE = PRICE_NOVEMBER
-  DATE_ACTIVE = NOVEMBER_END_DATE
-} else {
-  CHECKOUT_ACTIVE = CHECKOUT_OFFICIAL
-  PRICE_ACTIVE = PRICE_OFFICIAL
-  DATE_ACTIVE = undefined
-}
+let CHECKOUT_ACTIVE = CHECKOUT_NOVEMBER
+let PRICE_ACTIVE = PRICE_NOVEMBER
+let DATE_ACTIVE = NOVEMBER_END_DATE
 
 export { CHECKOUT_ACTIVE, PRICE_ACTIVE, DATE_ACTIVE }

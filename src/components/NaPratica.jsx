@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
-import { CHECKOUT_LAUNCH } from '../constants/checkout'
+import { CHECKOUT_NOVEMBER } from '../constants/checkout'
 
 const items = [
 	{
@@ -114,7 +114,7 @@ export default function NaPratica() {
 					{/* CTA para o curso */}
 					<div className='mt-8'>
 						<Button
-							href={CHECKOUT_LAUNCH}
+							href={CHECKOUT_NOVEMBER}
 							target='_blank'
 							variant='outline'
 							size='default'

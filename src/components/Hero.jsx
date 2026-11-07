@@ -1,7 +1,11 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
 import heroImg from '../assets/hero.jpeg'
-import { CHECKOUT_ACTIVE, PRICE_ACTIVE, DATE_ACTIVE } from '../constants/checkout'
+import {
+	CHECKOUT_ACTIVE,
+	PRICE_ACTIVE,
+	DATE_ACTIVE,
+} from '../constants/checkout'
 
 /**
  * Hero — primeira dobra da landing page de venda do curso.
@@ -33,7 +37,7 @@ export default function Hero() {
 			return `Preço inaugural: R$ ${PRICE_ACTIVE} — até ${formatDate(DATE_ACTIVE)}`
 		}
 		if (CHECKOUT_ACTIVE === 'https://pay.kiwify.com.br/lDy4qKE') {
-			return `Promoção de Novembro: R$ ${PRICE_ACTIVE} — até ${formatDate(DATE_ACTIVE)}`
+			return `Promoção de Novembro: R$ ${PRICE_ACTIVE}`
 		}
 		return `R$ ${PRICE_ACTIVE}`
 	})()
@@ -57,7 +61,8 @@ export default function Hero() {
 						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty'>
 							O As 5 Dimensões do Sono é um curso completo para ajudar você a
 							compreender o que está acontecendo, identificar o que realmente
-							precisa mudar e conduzir essas mudanças com clareza, passo a passo.
+							precisa mudar e conduzir essas mudanças com clareza, passo a
+							passo.
 						</p>
 						<p className='text-base md:text-lg text-on-surface-variant leading-relaxed text-pretty'>
 							Você vai aprender a olhar para o sono através de Essência, Corpo,
@@ -92,7 +97,7 @@ export default function Hero() {
 
 					{/* CTA + preço ativo */}
 					<div className='pt-2 flex flex-col sm:flex-row gap-4 items-start sm:items-center'>
-						<div className='inline-flex items-center gap-2 text-sm font-semibold text-secondary bg-secondary-container/60 rounded-full px-4 py-1.5'>
+						<div className='inline-flex items-center gap-2 text-xs font-semibold text-secondary bg-secondary-container/60 rounded-full px-4 py-1.5'>
 							<span
 								className='w-2 h-2 rounded-full bg-secondary animate-pulse'
 								aria-hidden='true'
@@ -114,7 +119,7 @@ export default function Hero() {
 				{/* Coluna de imagem */}
 				<div
 					ref={imageRef}
-				 className='relative h-125 md:h-145 w-full hidden md:block fade-in-right'
+					className='relative h-125 md:h-145 w-full hidden md:block fade-in-right'
 				>
 					<div className='relative z-10 w-full h-full rounded-3xl overflow-hidden shadow-ambient'>
 						<img

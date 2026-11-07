@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
-import { CHECKOUT_LAUNCH } from '../constants/checkout'
+import { CHECKOUT_NOVEMBER } from '../constants/checkout'
 
 /**
  * HowItWorks — Seção "Diferencial do método" (briefing item 6).
@@ -92,7 +92,7 @@ export default function HowItWorks() {
 
 				<div ref={buttonRef} className='text-center mt-10 fade-in-up delay-400'>
 					<Button
-						href={CHECKOUT_LAUNCH}
+						href={CHECKOUT_NOVEMBER}
 						target='_blank'
 						variant='primary'
 						size='default'

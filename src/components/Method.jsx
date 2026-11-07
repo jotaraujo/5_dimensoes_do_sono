@@ -8,7 +8,6 @@ import rotinaImg from '../assets/rotina.png'
 import Button from './ui/Button'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import DimensionCard from './ui/DimensionCard'
-import { CHECKOUT_LAUNCH } from '../constants/checkout'
 
 const dimensions = [
 	{

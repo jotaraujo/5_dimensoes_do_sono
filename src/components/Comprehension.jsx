@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
-import { CHECKOUT_LAUNCH } from '../constants/checkout'
+import { CHECKOUT_NOVEMBER } from '../constants/checkout'
 
 /**
  * Comprehension — Seção de posicionamento "Compreender não significa
@@ -58,7 +58,7 @@ export default function Comprehension() {
 					{/* CTA atualizado para o curso */}
 					<div className='flex justify-center mt-4'>
 						<Button
-							href={CHECKOUT_LAUNCH}
+							href={CHECKOUT_NOVEMBER}
 							target='_blank'
 							variant='primary'
 							size='default'

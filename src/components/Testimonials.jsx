@@ -10,6 +10,7 @@ import feedback5 from '../assets/feedback_5.jpeg'
 import feedback6 from '../assets/feedback_6.jpeg'
 import feedback7 from '../assets/feedback_7.jpeg'
 import feedback8 from '../assets/feedback_8.jpeg'
+import { CHECKOUT_NOVEMBER } from '../constants/checkout'
 
 const feedbackImages = [
 	{ src: feedback1, alt: 'Print de feedback da cliente 1' },
@@ -102,7 +103,7 @@ export default function Testimonials() {
 				{/* CTA após depoimentos */}
 				<div className='text-center mt-14'>
 					<Button
-						href='https://pay.kiwify.com.br/g0SED7e'
+						href={CHECKOUT_NOVEMBER}
 						target='_blank'
 						variant='primary'
 						size='default'

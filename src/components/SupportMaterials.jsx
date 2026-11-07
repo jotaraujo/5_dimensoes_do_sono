@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Button from './ui/Button'
-import { CHECKOUT_LAUNCH } from '../constants/checkout'
+import { CHECKOUT_NOVEMBER } from '../constants/checkout'
 
 /**
  * SupportMaterials — Seção 9: Materiais de apoio.
@@ -151,7 +151,7 @@ export default function SupportMaterials() {
 				{/* CTA */}
 				<div className='text-center mt-12'>
 					<Button
-						href={CHECKOUT_LAUNCH}
+						href={CHECKOUT_NOVEMBER}
 						target='_blank'
 						variant='primary'
 						size='default'
